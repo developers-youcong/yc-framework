@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.admin.mapper.CompanyMapper">
+
+
+    <select id="selectCompanyPageList" resultType="com.yc.common.core.base.entity.admin.CompanyEntity"
+            parameterType="com.yc.common.core.base.dto.admin.CompanyPageReqDTO">
+        SELECT
+        id,
+        company_code,
+        company_name,
+        contact,
+        phone,
+        address,
+        url,
+        email,
+        count,
+        `status`,
+        create_time,
+        update_time
+        FROM
+        yc_company
+        <where>
+            <if test="param.companyName != null and param.companyName!=''">
+                and company_name LIKE concat('%',#{param.companyName},'%')
+            </if>
+            <if test="param.orderCon != null and param.orderCon!='' and param.sortCon != null and param.sortCon!=''">
+                order by ${param.orderCon} ${param.sortCon}
+            </if>
+        </where>
+    </select>
+</mapper>

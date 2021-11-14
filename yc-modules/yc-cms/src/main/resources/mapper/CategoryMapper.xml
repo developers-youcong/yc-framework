@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.cms.mapper.CategoryMapper">
+
+    <select id="selectCategoryPageList" resultType="com.yc.common.core.base.entity.cms.CategoryEntity">
+        SELECT
+            id,
+            category_name,
+            `status`,
+            company_id,
+            ( SELECT company_name FROM yc_company WHERE id = company_id ) AS companyName,
+            create_time,
+            update_time
+        FROM
+            yc_category
+        <where>
+        <if test="param.categoryName != null and param.categoryName!=''">
+            and category_name LIKE concat('%',#{param.categoryName},'%')
+        </if>
+        <if test="param.orderCon != null and param.orderCon!='' and param.sortCon != null and param.sortCon!=''">
+            order by ${param.orderCon} ${param.sortCon}
+        </if>
+        </where>
+    </select>
+</mapper>

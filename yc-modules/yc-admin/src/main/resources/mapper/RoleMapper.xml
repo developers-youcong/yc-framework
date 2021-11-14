@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.admin.mapper.RoleMapper">
+
+    <select id="selectRolePageList" resultType="com.yc.common.core.base.entity.admin.RoleEntity">
+        SELECT
+        id,
+        role_name,
+        status,
+        create_time,
+        update_time
+        FROM
+        yc_role
+        <where>
+            <if test="param.roleName != null and param.roleName!=''">
+                and role_name LIKE concat('%',#{param.roleName},'%')
+            </if>
+            <if test="param.orderCon != null and param.orderCon!='' and param.sortCon != null and param.sortCon!=''">
+                order by ${param.orderCon} ${param.sortCon}
+            </if>
+        </where>
+    </select>
+</mapper>

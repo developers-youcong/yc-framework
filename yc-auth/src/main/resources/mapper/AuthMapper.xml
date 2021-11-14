@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.auth.mapper.AuthMapper">
+
+
+    <resultMap id="userAuth" type="com.yc.common.core.base.vo.auth.UserAuthVO">
+        <id property="id" column="id"/>
+        <result property="userName" column="user_name"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <result property="phone" column="phone"/>
+        <result property="nickName" column="nick_name"/>
+        <result property="companyId" column="company_id"/>
+        <result property="sex" column="sex"/>
+        <result property="status" column="status"/>
+    </resultMap>
+    <!-- 根据不同账户及其账户类型获取对应的用户信息 -->
+    <select id="selectUserAuthInfo" resultMap="userAuth">
+        SELECT
+            id,
+            user_name,
+            `password`,
+            email,
+            phone,
+            nick_name,
+            company_id,
+            sex,
+            `status`
+        FROM
+            yc_user
+        <where>
+            <if test="type!=null and type == 1">
+                user_name = #{account}
+            </if>
+            <if test="type!=null and type == 2">
+                email = #{account}
+            </if>
+            <if test="type!=null and type == 3">
+                phone = #{account}
+            </if>
+        </where>
+
+    </select>
+</mapper>

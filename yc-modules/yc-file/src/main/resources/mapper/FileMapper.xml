@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.file.mapper.FileMapper">
+
+    <select id="selectFilePageList" resultType="com.yc.common.core.base.entity.file.FileEntity"
+            parameterType="com.yc.common.core.base.dto.admin.CompanyPageReqDTO">
+        SELECT
+        id,
+        file_name,
+        file_url,
+        file_size,
+        file_type,
+        file_status,
+        upload_id,
+        company_id,
+        create_time,
+        update_time
+        FROM
+        yc_file
+        <where>
+            <if test="param.fileName != null and param.fileName!=''">
+                and file_name LIKE concat('%',#{param.fileName},'%')
+            </if>
+            <if test="param.orderCon != null and param.orderCon!='' and param.sortCon != null and param.sortCon!=''">
+                order by ${param.orderCon} ${param.sortCon}
+            </if>
+        </where>
+    </select>
+</mapper>

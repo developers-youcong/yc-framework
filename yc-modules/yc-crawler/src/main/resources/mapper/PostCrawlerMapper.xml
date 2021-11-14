@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yc.crawler.mapper.PostCrawlerMapper">
+
+    <insert id="insertPostCrawlerList">
+        insert into `yc_post` (id, post_author,post_title, post_content,
+        post_excerpt, create_time, update_time,
+        company_id,origin_url)
+        values
+        <foreach collection="list" index="index" item="item" separator=",">
+            (#{item.id},#{item.postAuthor},#{item.postTitle},#{item.postContent},#{item.description}
+            ,#{item.createTime},#{item.updateTime},#{item.companyId},#{item.originUrl})
+        </foreach>
+        ON DUPLICATE KEY UPDATE
+        id = VALUES(id),
+        post_author = VALUES(post_author),
+        post_title = VALUES(post_title),
+        post_content = VALUES (post_content),
+        post_excerpt = VALUES (post_excerpt),
+        create_time = VALUES (create_time),
+        update_time = VALUES (update_time),
+        company_id = VALUES (company_id),
+        origin_url = VALUES(origin_url)
+    </insert>
+
+
+    <insert id="insertUser" parameterType="com.yc.common.core.base.dto.crawler.UserCrawlerReqDTO">
+       INSERT INTO yc_user (id, user_name,`password`, nick_name,
+              company_id, create_time, update_time)
+            values (#{id}, #{userName},#{password},#{nickName}, #{companyId},
+              #{createTime}, #{updateTime})
+    </insert>
+
+
+    <select id="selectUserName" resultType="java.lang.String">
+        select id from yc_user where user_name = #{userName} and company_id =#{companyId} limit 1
+    </select>
+
+    <select id="selectAuthorPost" resultType="java.lang.Integer">
+        select count(1) from yc_post where post_author = #{postAuthor} and post_title= #{postTitle}
+    </select>
+
+
+    <select id="selectAllUserName" resultType="java.lang.String">
+        select user_name from yc_user where company_id = #{companyId}
+    </select>
+</mapper>
