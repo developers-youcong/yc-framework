@@ -76,6 +76,20 @@
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-common-security</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-elasticsearch</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-rabbitmq</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

@@ -72,6 +72,17 @@ public class AuthController {
     }
 
     /**
+     * 获取Token信息
+     *
+     * @return
+     */
+    @PostMapping("/auth/getTokenInfo")
+    @ApiOperation("获取Token信息")
+    public ResultBody getTokenInfo() {
+        return ResultBody.success(StpUtil.getTokenInfo());
+    }
+
+    /**
      * 退出
      *
      * @param reqDTO

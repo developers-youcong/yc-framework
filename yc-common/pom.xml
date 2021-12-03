@@ -16,6 +16,9 @@
         <module>yc-common-redis</module>
         <module>yc-common-security</module>
         <module>yc-common-knife4j</module>
+        <module>yc-common-mongodb</module>
+        <module>yc-common-elasticsearch</module>
+        <module>yc-common-rabbitmq</module>
     </modules>
 
 

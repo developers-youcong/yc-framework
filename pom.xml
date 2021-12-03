@@ -25,8 +25,6 @@
         <spring-boot-admin.version>2.2.3</spring-boot-admin.version>
         <spring-boot.mybatis>2.1.2</spring-boot.mybatis>
         <nacos.version>1.3.1</nacos.version>
-        <kaptcha.version>2.3.2</kaptcha.version>
-        <pagehelper.boot.version>1.2.12</pagehelper.boot.version>
         <commons.io.version>2.5</commons.io.version>
         <commons.fileupload.version>1.3.3</commons.fileupload.version>
         <velocity.version>1.7</velocity.version>
@@ -36,7 +34,6 @@
         <testng.version>6.10</testng.version>
         <knife4j-spring-boot-starter.version>2.0.7</knife4j-spring-boot-starter.version>
         <druid-spring-boot-starter.version>1.1.13</druid-spring-boot-starter.version>
-        <pagehelpe.version>5.1.6</pagehelpe.version>
         <bean-mapping.version>2.1.1</bean-mapping.version>
         <mybatis-plus.version>3.1.0</mybatis-plus.version>
         <spring-cloud-alibaba-dependencies.version>2.2.1.RELEASE</spring-cloud-alibaba-dependencies.version>
@@ -52,6 +49,7 @@
         <jbcrypt.version>0.4</jbcrypt.version>
         <guava.version>21.0</guava.version>
         <commons-net.version>3.6</commons-net.version>
+        <tl.version>1.11.0</tl.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -102,20 +100,6 @@
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${spring-boot.mybatis}</version>
-            </dependency>
-
-            <!-- 验证码 -->
-            <dependency>
-                <groupId>com.github.penggle</groupId>
-                <artifactId>kaptcha</artifactId>
-                <version>${kaptcha.version}</version>
-            </dependency>
-
-            <!-- pagehelper 分页插件 -->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>${pagehelper.boot.version}</version>
             </dependency>
 
             <!-- io常用工具类 -->
@@ -220,6 +204,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.deepoove</groupId>
+                <artifactId>poi-tl</artifactId>
+                <version>${tl.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.yc.framework</groupId>
                 <artifactId>yc-common-redis</artifactId>
                 <version>${version}</version>
@@ -242,6 +232,25 @@
                 <artifactId>yc-common-knife4j</artifactId>
                 <version>${version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-mongodb</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-elasticsearch</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-rabbitmq</artifactId>
+                <version>${version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
