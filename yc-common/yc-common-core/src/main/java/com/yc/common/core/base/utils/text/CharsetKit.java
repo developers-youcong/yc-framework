@@ -1,5 +1,5 @@
 package com.yc.common.core.base.utils.text;
-import com.yc.common.core.base.utils.StringUtils;
+import com.yc.common.core.base.utils.StringUtil;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -32,7 +32,7 @@ public class CharsetKit
      */
     public static Charset charset(String charset)
     {
-        return StringUtils.isEmpty(charset) ? Charset.defaultCharset() : Charset.forName(charset);
+        return StringUtil.isEmpty(charset) ? Charset.defaultCharset() : Charset.forName(charset);
     }
 
     /**
@@ -68,7 +68,7 @@ public class CharsetKit
             srcCharset = StandardCharsets.UTF_8;
         }
 
-        if (StringUtils.isEmpty(source) || srcCharset.equals(destCharset))
+        if (StringUtil.isEmpty(source) || srcCharset.equals(destCharset))
         {
             return source;
         }

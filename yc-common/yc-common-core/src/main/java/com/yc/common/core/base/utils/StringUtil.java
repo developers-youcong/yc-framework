@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  *
  * @author youcong
  */
-public class StringUtils extends org.apache.commons.lang3.StringUtils {
+public class StringUtil extends org.apache.commons.lang3.StringUtils {
     /**
      * 空字符串
      */

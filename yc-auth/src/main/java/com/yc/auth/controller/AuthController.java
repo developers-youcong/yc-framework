@@ -8,6 +8,7 @@ import com.yc.common.core.base.dto.auth.LogoutReqDTO;
 import com.yc.common.core.base.dto.auth.UserAuthInfoReqDTO;
 import com.yc.common.core.base.enums.ResultCode;
 import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.log.annotation.Log;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -39,6 +40,7 @@ public class AuthController {
      */
     @PostMapping("/auth/login")
     @ApiOperation("登录")
+    @Log("登录")
     public ResultBody login(@RequestBody UserAuthInfoReqDTO reqDTO) {
 
         if (StrUtil.isEmpty(reqDTO.getAccount()) || StrUtil.isEmpty(reqDTO.getPassword()) || reqDTO.getType() == null) {

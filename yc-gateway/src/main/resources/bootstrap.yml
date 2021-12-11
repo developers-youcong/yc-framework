@@ -49,7 +49,7 @@ spring:
         ds1:
           nacos:
             server-addr: 127.0.0.1:8848
-            dataId: sentinel-eqics-gateway
+            dataId: sentinel-gateway
             groupId: DEFAULT_GROUP
             data-type: json
             rule-type: flow

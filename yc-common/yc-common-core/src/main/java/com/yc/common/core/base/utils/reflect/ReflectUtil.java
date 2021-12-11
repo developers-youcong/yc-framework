@@ -17,7 +17,7 @@ import java.util.Date;
  * @author youcong
  */
 @SuppressWarnings("rawtypes")
-public class ReflectUtils
+public class ReflectUtil
 {
     private static final String SETTER_PREFIX = "set";
 
@@ -25,7 +25,7 @@ public class ReflectUtils
 
     private static final String CGLIB_CLASS_SEPARATOR = "$$";
 
-    private static Logger logger = LoggerFactory.getLogger(ReflectUtils.class);
+    private static Logger logger = LoggerFactory.getLogger(ReflectUtil.class);
 
     /**
      * 调用Getter方法.
