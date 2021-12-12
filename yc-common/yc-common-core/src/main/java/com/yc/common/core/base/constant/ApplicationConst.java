@@ -17,6 +17,7 @@ public class ApplicationConst {
     public static final String CRAWLER = "yc-crawler";
     public static final String FILE = "yc-file";
     public static final String PLUGINS = "yc-plugins";
+    public static final String WECHAT = "yc-wechat";
 
     /**
      * 微服务路由扫描包
@@ -27,7 +28,7 @@ public class ApplicationConst {
     public static final String KNIFE4J_CRAWLER_PACKAGE = "com.yc.crawler";
     public static final String KNIFE4J_FILE_PACKAGE = "com.yc.file.controller";
     public static final String KNIFE4J_PLUGINS_PACKAGE = "com.yc.plugins";
-
+    public static final String KNIFE4J_WECHAT_PACKAGE = "com.yc.wechat";
     /**
      * Mapper扫描包
      */
@@ -37,4 +38,5 @@ public class ApplicationConst {
     public static final String MAPPER_CRAWLER= "com.yc.crawler.mapper";
     public static final String MAPPER_FILE = "com.yc.file.mapper";
     public static final String MAPPER_PLUGINS = "com.yc.plugins.mapper";
+    public static final String MAPPER_WECHAT = "com.yc.wechat.mapper";
 }

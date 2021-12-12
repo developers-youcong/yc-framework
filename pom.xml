@@ -152,7 +152,6 @@
                 <version>${knife4j-spring-boot-starter.version}</version>
             </dependency>
 
-
             <!-- druid -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -253,6 +252,12 @@
 
             <dependency>
                 <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-activemq</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
                 <artifactId>yc-common-log</artifactId>
                 <version>${version}</version>
             </dependency>
@@ -346,6 +351,8 @@
                 <artifactId>jbcrypt</artifactId>
                 <version>${jbcrypt.version}</version>
             </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 

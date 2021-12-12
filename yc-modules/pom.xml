@@ -19,6 +19,7 @@
         <module>yc-file</module>
         <module>yc-plugins</module>
         <module>yc-monitor-server</module>
+        <module>yc-wechat</module>
     </modules>
 
 

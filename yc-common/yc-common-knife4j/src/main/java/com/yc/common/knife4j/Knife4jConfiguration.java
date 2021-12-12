@@ -103,6 +103,9 @@ public class Knife4jConfiguration {
             case ApplicationConst.PLUGINS:
                 basePackage = ApplicationConst.KNIFE4J_PLUGINS_PACKAGE;
                 break;
+            case ApplicationConst.WECHAT:
+                basePackage = ApplicationConst.KNIFE4J_WECHAT_PACKAGE;
+                break;
             default:
                 break;
         }
@@ -138,6 +141,9 @@ public class Knife4jConfiguration {
             case ApplicationConst.PLUGINS:
                 title = "统一插件管理";
                 break;
+            case ApplicationConst.WECHAT:
+                title = "微信生态管理";
+                break;
             default:
                 break;
         }
@@ -172,6 +178,9 @@ public class Knife4jConfiguration {
                 break;
             case ApplicationConst.PLUGINS:
                 desc = "Plugins API";
+                break;
+            case ApplicationConst.WECHAT:
+                desc = "Wechat API";
                 break;
             default:
                 break;
