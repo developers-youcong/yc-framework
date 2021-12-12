@@ -152,7 +152,6 @@
                 <version>${knife4j-spring-boot-starter.version}</version>
             </dependency>
 
-
             <!-- druid -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -252,6 +251,18 @@
             </dependency>
 
             <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-activemq</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-log</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
@@ -340,6 +351,8 @@
                 <artifactId>jbcrypt</artifactId>
                 <version>${jbcrypt.version}</version>
             </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 

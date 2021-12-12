@@ -19,6 +19,8 @@
         <module>yc-common-mongodb</module>
         <module>yc-common-elasticsearch</module>
         <module>yc-common-rabbitmq</module>
+        <module>yc-common-log</module>
+        <module>yc-common-activemq</module>
     </modules>
 
 

@@ -5,9 +5,11 @@ import com.yc.common.core.base.constant.ApplicationConst;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
@@ -15,7 +17,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/19 20:58
  */
 @Configuration
 @EnableSwagger2WebMvc
@@ -31,6 +32,27 @@ public class Knife4jConfiguration {
     private static final String VERSION = "1.0";
 
     private static final String GROUP_NAME = "1.0版本";
+
+    @Bean(value = "api")
+    public Docket groupRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(groupApiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build();
+    }
+
+    private ApiInfo groupApiInfo(){
+        return new ApiInfoBuilder()
+                .title(getTitle(applicationName))
+                .description(getDesc(applicationName))
+                .termsOfServiceUrl(URL)
+                .contact(AUTHOR_EMAIL)
+                .version(VERSION)
+                .build();
+    }
+
 
     @Bean(value = "defaultApi2")
     public Docket defaultApi2() {
@@ -81,6 +103,9 @@ public class Knife4jConfiguration {
             case ApplicationConst.PLUGINS:
                 basePackage = ApplicationConst.KNIFE4J_PLUGINS_PACKAGE;
                 break;
+            case ApplicationConst.WECHAT:
+                basePackage = ApplicationConst.KNIFE4J_WECHAT_PACKAGE;
+                break;
             default:
                 break;
         }
@@ -116,6 +141,9 @@ public class Knife4jConfiguration {
             case ApplicationConst.PLUGINS:
                 title = "统一插件管理";
                 break;
+            case ApplicationConst.WECHAT:
+                title = "微信生态管理";
+                break;
             default:
                 break;
         }
@@ -150,6 +178,9 @@ public class Knife4jConfiguration {
                 break;
             case ApplicationConst.PLUGINS:
                 desc = "Plugins API";
+                break;
+            case ApplicationConst.WECHAT:
+                desc = "Wechat API";
                 break;
             default:
                 break;
