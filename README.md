@@ -40,46 +40,63 @@
 ├── yc-auth            // 认证服务 [8081]
 ├── yc-api             // 接口服务
 ├── yc-common          // 通用模块
-│       └── yc-common-core                     // 核心模块
+│       └── yc-common-core                    // 核心模块
 │       └── yc-common-knife4j                 // 接口文档自动生成模块
 │       └── yc-common-redis                   // Redis模块
 │       └── yc-common-security                // 安全模块
 │       └── yc-common-elasticsearch           // ElasticSearch模块
 │       └── yc-common-mongodb                 // MongoDB模块
 │       └── yc-common-rabbitmq                // RabbitMQ模块
+│       └── yc-common-activemq                // ActiveMQ模块
+│       └── yc-common-log                    // 日志模块
 │                         
-├── yc-modules         // 微服务模块
+├── yc-modules           // 微服务模块
 │       └── yc-admin                              // 统一用户微服务 [9000]
-│       └── yc-cms                                 // 内容管理微服务 [9001]
-│       └── yc-crawler                             // 爬虫微服务 [9002]
-│       └── yc-file                                // 文件微服务 [9003]
+│       └── yc-cms                                // 内容管理微服务 [9001]
+│       └── yc-crawler                            // 爬虫微服务 [9002]
+│       └── yc-file                               // 文件微服务 [9003]
 │       └── yc-job                                // 定时任务服务 [9004]
-│       └── yc-plugins                                // 插件微服务 [9005]
+│       └── yc-plugins                            // 插件微服务 [9005]
+│       └── yc-wechat                             // 微信生态微服务 [9006]
+│       └── yc-monitor-server                           // 监控微服务 [9100]
 ├──pom.xml                
 ````
 
 ## 五、功能
 当前版本所具有的功能如下:
 
-- 用户登录/注册、退出；
-- 统一微服务接口鉴权；
+- 用户登录/注册、登录状态、用户信息、退出；
+- 微服务接口鉴权模块化；
 - 数据爬虫(爬取真气网、博客园、思否、CSDN等网站数据)；
-- 分布式定时任务；
+- 分布式定时任务微服务化；
 - 用户管理；
 - 文章管理；
 - 分类管理；
 - 标签管理；
 - 文件管理；
-- 接口文档自动生成；
-- Redis操作；
+- 接口文档模块化；
 - Sentinel限流熔断；
 - 分布式Token；
-- 默认集成博客园、聚合等API；
+- 默认集成博客园、聚合等第三方API；
+- 集成Redis；
 - 集成ElasticSearch；
 - 集成RabbitMQ;
-- 集成MongoDB。
+- 集成MongoDB；
+- 集成ActiveMQ;
+- 微服务日志模块化(支持MySQL、MongoDB等数据存储仓库)；
+- 接口文档网关统一化；
+- 集成微信生态(支持微信公众号、微信支付、微信开放平台、微信小程序等)；
+- 集成Admin Server微服务监控。
 
-
+### 本次版本V1.0.2更新
+- 集成ActiveMQ;
+- 集成微信生态(支持微信公众号、微信支付、微信开放平台、微信小程序等)；
+- 接口文档网关统一化；
+- 微服务日志模块化；
+- 集成Admin Server微服务监控(应用状态、CPU、内存、JVM等)；
+- 修复若干bug；
+- sentinel轻量级迁移至doc/run/下；
+- 文档更新v1.0.2。
 
 ## 六、环境
 
@@ -88,18 +105,22 @@
 - DB: MySQL5.7.x或MySQL8.x版本均支持；
 - JDK: JDK 1.8；
 - Maven: Maven 3.0版本以上均支持；
+- Nacos:1.3.x版本以上均支持；
 - Redis: 5.x版本以上均支持；
 - MongoDB:4.x版本以上均支持；
 - ElasticSearch:7.x版本以上均支持；
-- RabbitMQ:3.x版本以上均支持。
+- RabbitMQ:3.x版本以上均支持；
+- ActiveMQ:5.x版本以上均支持。
 
 ### 2.服务器部署环境
 - DB:MySQL5.7.x或MySQL8.x版本均支持；
 - JRE:JRE1.8；
+- Nacos:1.3.x版本以上均支持；
 - Redix:5.x版本以上均支持；
 - MongoDB:4.x版本以上均支持；
 - ElasticSearch:7.x版本以上均支持；
 - RabbitMQ:3.x版本以上均支持；
+- ActiveMQ:5.x版本以上均支持；
 - 操作系统:Windows Server和Ubuntu、CenOS等均支持。
 
 
@@ -112,7 +133,8 @@
 - yc-crawler；
 - yc-file；
 - yc-job；
-- yc-plugins。
+- yc-plugins;
+- yc-wechat。
 
 其中涉及数据爬虫相关，必须确保yc-crawler、yc-plugins、yc-job等运行起来才行。
 

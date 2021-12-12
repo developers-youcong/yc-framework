@@ -40,6 +40,13 @@
             <artifactId>weixin-java-miniapp</artifactId>
             <version>${wx.version}</version>
         </dependency>
+        <!-- 企业号/企业微信-->
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-cp</artifactId>
+            <version>${wx.version}</version>
+        </dependency>
+
         <!-- SpringCloud Ailibaba Nacos -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

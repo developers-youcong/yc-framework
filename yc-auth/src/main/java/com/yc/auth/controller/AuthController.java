@@ -42,7 +42,6 @@ public class AuthController {
     @ApiOperation("登录")
     @Log("登录")
     public ResultBody login(@RequestBody UserAuthInfoReqDTO reqDTO) {
-
         if (StrUtil.isEmpty(reqDTO.getAccount()) || StrUtil.isEmpty(reqDTO.getPassword()) || reqDTO.getType() == null) {
             return ResultBody.fail(ResultCode.ILLEGAL_PARAMETER_ERROR.getCode(), ResultCode.ILLEGAL_PARAMETER_ERROR.getMsg());
         }
