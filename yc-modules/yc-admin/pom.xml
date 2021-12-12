@@ -47,6 +47,11 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
@@ -75,20 +80,6 @@
         <dependency>
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-common-security</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-mongodb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-elasticsearch</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-rabbitmq</artifactId>
         </dependency>
     </dependencies>
 
