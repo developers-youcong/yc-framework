@@ -95,7 +95,7 @@
 - 微服务日志模块化；
 - 集成Admin Server微服务监控(应用状态、CPU、内存、JVM等)；
 - 修复若干bug；
-- sentinel轻量级迁移至doc/run/下；
+- Sentinel轻量级迁移至doc/run/下；
 - 文档更新v1.0.2。
 
 ## 六、环境
