@@ -291,6 +291,12 @@
 
             <dependency>
                 <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-elasticjob</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
                 <artifactId>yc-common-seata</artifactId>
                 <version>${version}</version>
             </dependency>
@@ -337,7 +343,7 @@
                 <version>${spring-webmvc.version}</version>
                 <scope>compile</scope>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+
             <dependency>
                 <groupId>org.jsoup</groupId>
                 <artifactId>jsoup</artifactId>

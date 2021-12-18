@@ -138,7 +138,8 @@
 - Seata:1.3.x版本均支持；
 - Tx-LCN:5.x版本均支持；
 - Xxl-Job:2.x版本均支持；
-- Zipkin:2.x版本均支持。
+- Zipkin:2.x版本均支持；
+- Elastic-Job:3.x版本支持。
 
 ### 2.服务器部署环境
 - DB:MySQL5.7.x或MySQL8.x版本均支持；
@@ -155,6 +156,7 @@
 - Tx-LCN:5.x版本均支持；
 - Xxl-Job:2.x版本均支持；
 - Zipkin:2.x版本均支持；
+- Elastic-Job:3.x版本支持。
 - 操作系统:Windows Server和Ubuntu、CenOS等均支持。
 
 
