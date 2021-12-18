@@ -49,7 +49,7 @@
         <jbcrypt.version>0.4</jbcrypt.version>
         <guava.version>21.0</guava.version>
         <commons-net.version>3.6</commons-net.version>
-        <tl.version>1.11.0</tl.version>
+        <tl-poi.version>1.11.0</tl-poi.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -191,6 +191,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.deepoove</groupId>
+                <artifactId>poi-tl</artifactId>
+                <version>${tl-poi.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
@@ -202,11 +208,6 @@
                 <version>${version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.deepoove</groupId>
-                <artifactId>poi-tl</artifactId>
-                <version>${tl.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>com.yc.framework</groupId>
@@ -281,6 +282,37 @@
                 <version>${version}</version>
             </dependency>
 
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-xxljob</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-seata</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-wx</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-crawler</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-quartz</artifactId>
+                <version>${version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
@@ -318,27 +350,7 @@
                 <version>${commons-net.version}</version>
             </dependency>
 
-            <!-- webmagic-->
-            <dependency>
-                <groupId>us.codecraft</groupId>
-                <artifactId>webmagic-core</artifactId>
-                <version>${webmagic.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-log4j12</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>us.codecraft</groupId>
-                <artifactId>webmagic-extension</artifactId>
-                <version>${webmagic.version}</version>
-            </dependency>
+
 
             <dependency>
                 <groupId>cn.dev33</groupId>

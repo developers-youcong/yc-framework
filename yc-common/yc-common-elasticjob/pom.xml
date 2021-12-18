@@ -10,15 +10,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yc.framework</groupId>
-    <artifactId>yc-common-rocketmq</artifactId>
+    <artifactId>yc-common-elasticjob</artifactId>
+
     <properties>
-    <rocketmq.version>2.1.1</rocketmq.version>
+        <elasticjob.version>3.0.1</elasticjob.version>
     </properties>
-<dependencies>
-    <dependency>
-        <groupId>org.apache.rocketmq</groupId>
-        <artifactId>rocketmq-spring-boot-starter</artifactId>
-        <version>${rocketmq.version}</version>
-    </dependency>
-</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.shardingsphere.elasticjob</groupId>
+            <artifactId>elasticjob-lite-core</artifactId>
+            <version>${elasticjob.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>

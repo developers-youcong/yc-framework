@@ -10,15 +10,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yc.framework</groupId>
-    <artifactId>yc-common-rocketmq</artifactId>
+    <artifactId>yc-common-seata</artifactId>
+
     <properties>
-    <rocketmq.version>2.1.1</rocketmq.version>
+        <seata.version>1.3.0</seata.version>
     </properties>
-<dependencies>
-    <dependency>
-        <groupId>org.apache.rocketmq</groupId>
-        <artifactId>rocketmq-spring-boot-starter</artifactId>
-        <version>${rocketmq.version}</version>
-    </dependency>
-</dependencies>
+    <dependencies>
+
+        <!-- seata-spring-boot-starter -->
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring-boot-starter</artifactId>
+            <version>${seata.version}</version>
+        </dependency>
+
+    </dependencies>
+
 </project>
