@@ -62,11 +62,9 @@
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-api</artifactId>
         </dependency>
-        
-        <!--引入quartz定时框架-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-quartz</artifactId>
         </dependency>
 
 

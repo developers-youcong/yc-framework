@@ -21,6 +21,15 @@
         <module>yc-common-rabbitmq</module>
         <module>yc-common-log</module>
         <module>yc-common-activemq</module>
+        <module>yc-common-kafka</module>
+        <module>yc-common-rocketmq</module>
+        <module>yc-common-txlcn</module>
+        <module>yc-common-xxljob</module>
+        <module>yc-common-seata</module>
+        <module>yc-common-wx</module>
+        <module>yc-common-crawler</module>
+        <module>yc-common-elasticjob</module>
+        <module>yc-common-quartz</module>
     </modules>
 
 

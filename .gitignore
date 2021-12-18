@@ -1,7 +1,7 @@
 ######################################################################
 # Build Tools
 *.mv.db
-
+.txlcn
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar

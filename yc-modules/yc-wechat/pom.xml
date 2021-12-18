@@ -16,36 +16,7 @@
         <wx.version>4.1.0</wx.version>
     </properties>
     <dependencies>
-        <!-- 微信支付 -->
-        <dependency>
-            <groupId>com.github.binarywang</groupId>
-            <artifactId>weixin-java-pay</artifactId>
-            <version>${wx.version}</version>
-        </dependency>
-        <!-- 公众号 -->
-        <dependency>
-            <groupId>com.github.binarywang</groupId>
-            <artifactId>weixin-java-mp</artifactId>
-            <version>${wx.version}</version>
-        </dependency>
-        <!-- 微信开放平台 -->
-        <dependency>
-            <groupId>com.github.binarywang</groupId>
-            <artifactId>weixin-java-open</artifactId>
-            <version>${wx.version}</version>
-        </dependency>
-        <!-- 微信小程序-->
-        <dependency>
-            <groupId>com.github.binarywang</groupId>
-            <artifactId>weixin-java-miniapp</artifactId>
-            <version>${wx.version}</version>
-        </dependency>
-        <!-- 企业号/企业微信-->
-        <dependency>
-            <groupId>com.github.binarywang</groupId>
-            <artifactId>weixin-java-cp</artifactId>
-            <version>${wx.version}</version>
-        </dependency>
+
 
         <!-- SpringCloud Ailibaba Nacos -->
         <dependency>
@@ -85,6 +56,11 @@
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-wx</artifactId>
         </dependency>
 
         <dependency>
