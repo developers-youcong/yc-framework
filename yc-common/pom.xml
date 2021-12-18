@@ -23,6 +23,7 @@
         <module>yc-common-activemq</module>
         <module>yc-common-kafka</module>
         <module>yc-common-rocketmq</module>
+        <module>yc-common-txlcn</module>
     </modules>
 
 

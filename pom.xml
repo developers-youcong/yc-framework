@@ -258,6 +258,25 @@
 
             <dependency>
                 <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-rocketmq</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-kafka</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-txlcn</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
                 <artifactId>yc-common-log</artifactId>
                 <version>${version}</version>
             </dependency>
