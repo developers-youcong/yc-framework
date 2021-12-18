@@ -48,7 +48,15 @@
 │       └── yc-common-mongodb                 // MongoDB模块
 │       └── yc-common-rabbitmq                // RabbitMQ模块
 │       └── yc-common-activemq                // ActiveMQ模块
-│       └── yc-common-log                    // 日志模块
+│       └── yc-common-kafka                    // Kafka模块
+│       └── yc-common-rocketmq                 // RocketMQ日志模块
+│       └── yc-common-wx                       // 微信生态模块
+│       └── yc-common-crawler                  // 爬虫模块
+│       └── yc-common-seata                    // 分布式事务Seata模块
+│       └── yc-common-txlcn                    // 分布式事务Tx-LCN模块
+│       └── yc-common-quartz                   // 分布式定时任务Quartz模块
+│       └── yc-common-xxljob                   // 分布式定时任务xxl-job模块
+│       └── yc-common-elasticjob               // 分布式定时任务Elastic-Job模块
 │                         
 ├── yc-modules           // 微服务模块
 │       └── yc-admin                              // 统一用户微服务 [9000]
@@ -58,7 +66,7 @@
 │       └── yc-job                                // 定时任务服务 [9004]
 │       └── yc-plugins                            // 插件微服务 [9005]
 │       └── yc-wechat                             // 微信生态微服务 [9006]
-│       └── yc-monitor-server                           // 监控微服务 [9100]
+│       └── yc-monitor-server                     // 监控微服务 [9100]
 ├──pom.xml                
 ````
 
@@ -82,45 +90,71 @@
 - 集成ElasticSearch；
 - 集成RabbitMQ;
 - 集成MongoDB；
-- 集成ActiveMQ;
+- 集成ActiveMQ; 
 - 微服务日志模块化(支持MySQL、MongoDB等数据存储仓库)；
 - 接口文档网关统一化；
-- 集成微信生态(支持微信公众号、微信支付、微信开放平台、微信小程序等)；
-- 集成Admin Server微服务监控。
+- 集成微信生态(支持微信公众号、微信支付、微信开放平台、微信小程序、企业号/企业微信等)；
+- 集成Admin Server微服务监控；
+- 集成分布式事务Seata；
+- 集成分布式事务Tx-LCN；
+- 集成消息队列Kafka；
+- 集成消息队列RocketMQ；
+- 集成分布式定时任务Xxl-Job；
+- 微信生态方案模块化；
+- 集成分布式定时任务Elastic-Job；
+- Quartz定时任务模块化；
+- 爬虫模块化；
+- 集成Zipkin+Sleuth分布式链路追踪。
 
-### 本次版本V1.0.2更新
-- 集成ActiveMQ;
-- 集成微信生态(支持微信公众号、微信支付、微信开放平台、微信小程序等)；
-- 接口文档网关统一化；
-- 微服务日志模块化；
-- 集成Admin Server微服务监控(应用状态、CPU、内存、JVM等)；
-- 修复若干bug；
-- Sentinel轻量级迁移至doc/run/下；
-- 文档更新v1.0.2。
+### 本次版本V1.0.3更新
+- 集成分布式事务Seata；
+- 集成分布式事务Tx-LCN；
+- 集成Kafka；
+- 集成RocketMQ；
+- 集成分布式定时任务Xxl-Job；
+- 微信生态方案模块化；
+- 集成分布式定时任务Elastic-Job；
+- Quartz定时任务模块化；
+- 爬虫模块化；
+- 集成Zipkin+sleuth分布式链路追踪；
+- 部分问题修复；
+- 文档更新1.0.3。
 
 ## 六、环境
 
 ### 1.开发环境
-- IDE: IntelliJ IDEA 2018.2+版本以上均支持；
-- DB: MySQL5.7.x或MySQL8.x版本均支持；
-- JDK: JDK 1.8；
-- Maven: Maven 3.0版本以上均支持；
-- Nacos:1.3.x版本以上均支持；
-- Redis: 5.x版本以上均支持；
-- MongoDB:4.x版本以上均支持；
-- ElasticSearch:7.x版本以上均支持；
-- RabbitMQ:3.x版本以上均支持；
-- ActiveMQ:5.x版本以上均支持。
+- IDE:IntelliJ IDEA 2018.2+版本以上均支持；
+- DB:MySQL5.7.x或MySQL8.x版本均支持；
+- JDK:1.8；
+- Maven: 3.x版本均支持；
+- Nacos:1.3.x版本均支持；
+- Redis: 5.x版本均支持；
+- MongoDB:4.x版本均支持；
+- ElasticSearch:7.x版本均支持；
+- RabbitMQ:3.x版本均支持；
+- ActiveMQ:5.x版本均支持；
+- Kafka:2.x版本均支持；
+- RocketMQ:4.x版本均支持；
+- Seata:1.3.x版本均支持；
+- Tx-LCN:5.x版本均支持；
+- Xxl-Job:2.x版本均支持；
+- Zipkin:2.x版本均支持。
 
 ### 2.服务器部署环境
 - DB:MySQL5.7.x或MySQL8.x版本均支持；
 - JRE:JRE1.8；
-- Nacos:1.3.x版本以上均支持；
-- Redix:5.x版本以上均支持；
-- MongoDB:4.x版本以上均支持；
-- ElasticSearch:7.x版本以上均支持；
-- RabbitMQ:3.x版本以上均支持；
-- ActiveMQ:5.x版本以上均支持；
+- Nacos:1.3.x版本均支持；
+- Redix:5.x版本均支持；
+- MongoDB:4.x版本均支持；
+- ElasticSearch:7.x版本均支持；
+- RabbitMQ:3.x版本均支持；
+- ActiveMQ:5.x版本均支持；
+- Kafka:2.x版本均支持；
+- RocketMQ:4.x版本均支持；
+- Seata:1.3.x版本均支持；
+- Tx-LCN:5.x版本均支持；
+- Xxl-Job:2.x版本均支持；
+- Zipkin:2.x版本均支持；
 - 操作系统:Windows Server和Ubuntu、CenOS等均支持。
 
 
