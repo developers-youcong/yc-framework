@@ -37,6 +37,8 @@
         <module>yc-common-flink</module>
         <module>yc-common-hadoop</module>
         <module>yc-common-netty</module>
+        <module>yc-common-openfeign</module>
+        <module>yc-common-mp</module>
     </modules>
 
 

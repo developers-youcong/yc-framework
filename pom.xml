@@ -365,6 +365,17 @@
                 <version>${version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-openfeign</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-mp</artifactId>
+                <version>${version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.google.guava</groupId>
