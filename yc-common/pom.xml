@@ -35,6 +35,8 @@
         <module>yc-common-cs</module>
         <module>yc-common-monitor</module>
         <module>yc-common-flink</module>
+        <module>yc-common-hadoop</module>
+        <module>yc-common-netty</module>
     </modules>
 
 
