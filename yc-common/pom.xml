@@ -34,6 +34,7 @@
         <module>yc-common-test</module>
         <module>yc-common-cs</module>
         <module>yc-common-monitor</module>
+        <module>yc-common-flink</module>
     </modules>
 
 
