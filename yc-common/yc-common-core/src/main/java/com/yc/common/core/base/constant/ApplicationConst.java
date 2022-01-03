@@ -8,6 +8,10 @@ package com.yc.common.core.base.constant;
 public class ApplicationConst {
 
     public static final String FEIGN_PACKAGE_SCANNER = "com.yc";
+
+    public static final String DEFAULT_FLAG = "-";
+    public static final String NULL_STR = "";
+
     /**
      * 微服务应用名称
      */
@@ -35,7 +39,7 @@ public class ApplicationConst {
     public static final String MAPPER_AUTH = "com.yc.auth.mapper";
     public static final String MAPPER_ADMIN = "com.yc.admin.mapper";
     public static final String MAPPER_CMS = "com.yc.cms.mapper";
-    public static final String MAPPER_CRAWLER= "com.yc.crawler.mapper";
+    public static final String MAPPER_CRAWLER = "com.yc.crawler.mapper";
     public static final String MAPPER_FILE = "com.yc.file.mapper";
     public static final String MAPPER_PLUGINS = "com.yc.plugins.mapper";
     public static final String MAPPER_WECHAT = "com.yc.wechat.mapper";

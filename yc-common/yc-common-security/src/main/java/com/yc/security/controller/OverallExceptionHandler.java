@@ -1,6 +1,9 @@
 package com.yc.security.controller;
 
+import cn.dev33.satoken.exception.DisableLoginException;
 import cn.dev33.satoken.exception.NotLoginException;
+import cn.dev33.satoken.exception.NotPermissionException;
+import cn.dev33.satoken.exception.NotRoleException;
 import com.yc.common.core.base.enums.ResultCode;
 import com.yc.common.core.base.result.ResultBody;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +23,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class OverallExceptionHandler {
 
+    /**
+     * 用户接口基本鉴权
+     *
+     * @param e
+     * @return
+     */
     @ExceptionHandler(value = NotLoginException.class)
     public ResultBody handUserExceptionHandler(NotLoginException e) {
         e.printStackTrace();
@@ -41,5 +50,28 @@ public class OverallExceptionHandler {
         return ResultBody.fail(ResultCode.TOKEN_ERROR.getCode(), message);
     }
 
+    /**
+     * 权限
+     *
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(value = NotPermissionException.class)
+    public ResultBody handNotPermissionExceptionHandler(NotPermissionException e) {
+        e.printStackTrace();
+        return ResultBody.fail(ResultCode.PERM_ERROR.getCode(), e.getMessage());
+    }
+
+    /**
+     * 角色
+     *
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(value = NotRoleException.class)
+    public ResultBody handNotNotRoleExceptionHandler(NotRoleException e) {
+        e.printStackTrace();
+        return ResultBody.fail(ResultCode.ROLE_ERROR.getCode(), e.getMessage());
+    }
 
 }
