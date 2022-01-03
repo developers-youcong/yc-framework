@@ -340,6 +340,13 @@
                 <version>${version}</version>
             </dependency>
 
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-monitor</artifactId>
+                <version>${version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
@@ -376,7 +383,6 @@
                 <artifactId>commons-net</artifactId>
                 <version>${commons-net.version}</version>
             </dependency>
-
 
 
             <dependency>

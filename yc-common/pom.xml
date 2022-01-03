@@ -33,6 +33,7 @@
         <module>yc-common-linktrack</module>
         <module>yc-common-test</module>
         <module>yc-common-cs</module>
+        <module>yc-common-monitor</module>
     </modules>
 
 
