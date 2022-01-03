@@ -39,6 +39,7 @@
         <module>yc-common-netty</module>
         <module>yc-common-openfeign</module>
         <module>yc-common-mp</module>
+        <module>yc-common-pay</module>
     </modules>
 
 
