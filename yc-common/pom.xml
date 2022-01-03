@@ -31,6 +31,8 @@
         <module>yc-common-elasticjob</module>
         <module>yc-common-quartz</module>
         <module>yc-common-linktrack</module>
+        <module>yc-common-test</module>
+        <module>yc-common-cs</module>
     </modules>
 
 
