@@ -30,6 +30,7 @@
         <module>yc-common-crawler</module>
         <module>yc-common-elasticjob</module>
         <module>yc-common-quartz</module>
+        <module>yc-common-linktrack</module>
     </modules>
 
 

@@ -313,6 +313,14 @@
                 <artifactId>yc-common-quartz</artifactId>
                 <version>${version}</version>
             </dependency>
+
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-linktrack</artifactId>
+                <version>${version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>

@@ -82,10 +82,6 @@
             <artifactId>yc-common-security</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-txlcn</artifactId>
-        </dependency>
     </dependencies>
 
     <build>

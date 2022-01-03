@@ -4,7 +4,6 @@ import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.yc.admin.mapper.CompanyMapper;
 import com.yc.admin.service.CompanyService;
 import com.yc.common.core.base.dto.admin.CompanyAddOrUpdateReqDTO;
@@ -14,7 +13,6 @@ import com.yc.common.core.base.dto.admin.CompanyPageReqDTO;
 import com.yc.common.core.base.entity.admin.CompanyEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @description:
@@ -34,8 +32,6 @@ public class CompanyServiceImpl extends ServiceImpl<CompanyMapper, CompanyEntity
     }
 
     @Override
-    @LcnTransaction
-    @Transactional(rollbackFor = Exception.class)
     public int saveOrUpdateCompanyInfo(CompanyAddOrUpdateReqDTO reqDTO) {
         return handleCompanyAddOrUpdate(reqDTO);
     }
