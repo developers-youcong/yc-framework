@@ -40,6 +40,7 @@
         <module>yc-common-openfeign</module>
         <module>yc-common-mp</module>
         <module>yc-common-pay</module>
+        <module>yc-common-logstash</module>
     </modules>
 
 
