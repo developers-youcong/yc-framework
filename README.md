@@ -56,7 +56,17 @@
 │       └── yc-common-txlcn                    // 分布式事务Tx-LCN模块
 │       └── yc-common-quartz                   // 分布式定时任务Quartz模块
 │       └── yc-common-xxljob                   // 分布式定时任务xxl-job模块
-│       └── yc-common-elasticjob               // 分布式定时任务Elastic-Job模块
+│       └── yc-common-logstash                 // 分布式日志管理(ELK)模块
+│       └── yc-common-pay                      // 第三方支付模块
+│       └── yc-common-hadoop                   // 大数据Hadoop模块
+│       └── yc-common-flink                    // 分布式计算引擎模块
+│       └── yc-common-netty                    // Netty模块
+│       └── yc-common-openfeign                // 分布式微服务通信模块
+│       └── yc-common-mp                       // MyBatis-Plus模块
+│       └── yc-common-linktrack                // 分布式链路追踪模块
+│       └── yc-common-cs                       // 对象云存储模块
+│       └── yc-common-monitor                  // 微服务监控模块
+│       └── yc-common-test                     // 单元测试模块
 │                         
 ├── yc-modules           // 微服务模块
 │       └── yc-admin                              // 统一用户微服务 [9000]
@@ -76,7 +86,6 @@
 - 用户登录/注册、登录状态、用户信息、退出；
 - 微服务接口鉴权模块化；
 - 数据爬虫(爬取真气网、博客园、思否、CSDN等网站数据)；
-- 分布式定时任务微服务化；
 - 用户管理；
 - 文章管理；
 - 分类管理；
@@ -86,39 +95,52 @@
 - Sentinel限流熔断；
 - 分布式Token；
 - 默认集成博客园、聚合等第三方API；
-- 集成Redis；
-- 集成ElasticSearch；
-- 集成RabbitMQ;
-- 集成MongoDB；
-- 集成ActiveMQ; 
+- Redis模块化；
+- ElasticSearch模块化；
+- 消息队列RabbitMQ模块化;
+- MongoDB模块化；
+- 消息队列ActiveMQ模块化; 
 - 微服务日志模块化(支持MySQL、MongoDB等数据存储仓库)；
 - 接口文档网关统一化；
-- 集成微信生态(支持微信公众号、微信支付、微信开放平台、微信小程序、企业号/企业微信等)；
-- 集成Admin Server微服务监控；
-- 集成分布式事务Seata；
-- 集成分布式事务Tx-LCN；
-- 集成消息队列Kafka；
-- 集成消息队列RocketMQ；
-- 集成分布式定时任务Xxl-Job；
+- 微信生态(支持微信公众号、微信支付、微信开放平台、微信小程序、企业号/企业微信等)模块化；
+- Admin Server微服务监控模块化；
+- 分布式事务Seata模块化；
+- 分布式事务Tx-LCN模块化；
+- 消息队列Kafka模块化；
+- 消息队列RocketMQ模块化；
+- 分布式定时任务Xxl-Job模块化；
 - 微信生态方案模块化；
 - 集成分布式定时任务Elastic-Job；
 - Quartz定时任务模块化；
 - 爬虫模块化；
-- 集成Zipkin+Sleuth分布式链路追踪。
+- 分布式链路追踪模块化;
+- Hadoop模块化；
+- 分布式日志管理(ELK)模块化；
+- Apache Flink模块化；
+- Netty模块化；
+- OpenFeign模块化；
+- 第三方支付模块化；
+- 单元测试模块化；
+- MyBatis-Plus模块化；
+- 对象云存储模块化。
 
-### 本次版本V1.0.3更新
-- 集成分布式事务Seata；
-- 集成分布式事务Tx-LCN；
-- 集成Kafka；
-- 集成RocketMQ；
-- 集成分布式定时任务Xxl-Job；
-- 微信生态方案模块化；
-- 集成分布式定时任务Elastic-Job；
-- Quartz定时任务模块化；
+### 本次版本V1.0.4更新
+- 鉴权模块完善角色与菜单；
+- 多账号体系构建(支持多端使用、支持多系统使用等)；
+- 网关鉴权机制完善；
+- 分布式Token完善；
+- 分布式日志管理(ELK)模块化；
+- 第三方支付模块化；
+- Hadoop模块化；
+- Flink模块化；
+- Netty模块化；
 - 爬虫模块化；
-- 集成Zipkin+sleuth分布式链路追踪；
-- 部分问题修复；
-- 文档更新1.0.3。
+- Feign模块化；
+- MyBatis-Plus模块化；
+- 分布式链路追踪模块化；
+- 对象云存储模块化(华为云、阿里云、腾讯云、百度云等兼容与支持)；
+- 微服务监控模块化；
+- 单元测试模块化。
 
 ## 六、环境
 
@@ -139,7 +161,9 @@
 - Tx-LCN:5.x版本均支持；
 - Xxl-Job:2.x版本均支持；
 - Zipkin:2.x版本均支持；
-- Elastic-Job:3.x版本支持。
+- Elastic-Job:3.x版本支持；
+- Hadoop:3.3.1版本支持。
+- ELK:7.4.0版本支持。
 
 ### 2.服务器部署环境
 - DB:MySQL5.7.x或MySQL8.x版本均支持；
@@ -156,7 +180,9 @@
 - Tx-LCN:5.x版本均支持；
 - Xxl-Job:2.x版本均支持；
 - Zipkin:2.x版本均支持；
-- Elastic-Job:3.x版本支持。
+- Elastic-Job:3.x版本支持；
+- Hadoop:3.3.1版本支持；
+- ELK:7.4.0版本支持；
 - 操作系统:Windows Server和Ubuntu、CenOS等均支持。
 
 
