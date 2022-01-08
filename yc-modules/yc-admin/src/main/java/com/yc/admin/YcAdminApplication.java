@@ -1,10 +1,10 @@
 package com.yc.admin;
 
-import com.codingapi.txlcn.tc.config.EnableDistributedTransaction;
 import com.yc.common.core.base.constant.ApplicationConst;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @description:
@@ -12,7 +12,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  * @time: 2021/8/24 22:00
  */
 @SpringCloudApplication
-@EnableDistributedTransaction
+@EnableFeignClients(basePackages = ApplicationConst.FEIGN_PACKAGE_SCANNER)
 @MapperScan(ApplicationConst.MAPPER_ADMIN)
 public class YcAdminApplication {
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 package com.yc.admin.controller;
 
+import cn.dev33.satoken.annotation.SaCheckRole;
 import com.yc.admin.service.CompanyService;
 import com.yc.common.core.base.dto.admin.CompanyAddOrUpdateReqDTO;
 import com.yc.common.core.base.dto.admin.CompanyDelReqDTO;
@@ -40,6 +41,7 @@ public class CompanyController {
         log.info("/company/queryCompanyInfo:" + reqDTO);
         return ResultBody.success(companyService.queryCompanyInfo(reqDTO));
     }
+
     /**
      * 获取公司列表
      *

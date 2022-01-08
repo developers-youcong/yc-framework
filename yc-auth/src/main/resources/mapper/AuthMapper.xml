@@ -17,17 +17,17 @@
     <!-- 根据不同账户及其账户类型获取对应的用户信息 -->
     <select id="selectUserAuthInfo" resultMap="userAuth">
         SELECT
-            id,
-            user_name,
-            `password`,
-            email,
-            phone,
-            nick_name,
-            company_id,
-            sex,
-            `status`
+        id,
+        user_name,
+        `password`,
+        email,
+        phone,
+        nick_name,
+        company_id,
+        sex,
+        `status`
         FROM
-            yc_user
+        yc_user
         <where>
             <if test="type!=null and type == 1">
                 user_name = #{account}
@@ -39,6 +39,29 @@
                 phone = #{account}
             </if>
         </where>
+    </select>
 
+    <!-- 根据用户ID获取对应的角色key列表 -->
+    <select id="selectUserIdByRole" resultType="java.lang.String">
+        SELECT
+            role_key
+        FROM
+            yc_role AS A
+            LEFT JOIN yc_user_role AS B ON ( A.id = B.role_id )
+        WHERE
+            B.user_id = #{userId}
+    </select>
+
+    <!-- 根据用户ID获取对应的角色所属菜单key -->
+    <select id="selectUserIdByPerm" resultType="java.lang.String">
+        SELECT
+            E.menu_key
+        FROM
+            yc_user AS A
+            LEFT JOIN yc_user_role AS B ON ( A.id = B.user_id )
+          LEFT JOIN yc_role AS C ON(C.id = B.role_id)
+            LEFT JOIN yc_role_menu AS D ON(D.role_id = c.id)
+            LEFT JOIN yc_menu AS E ON(E.id = D.menu_id)
+            WHERE A.id = #{userId}
     </select>
 </mapper>

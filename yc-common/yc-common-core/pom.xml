@@ -12,10 +12,10 @@
     <artifactId>yc-common-core</artifactId>
 
     <dependencies>
-        <!-- SpringCloud Openfeign -->
+        <!-- Openfeign -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-openfeign</artifactId>
         </dependency>
 
 
@@ -35,16 +35,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-core</artifactId>
-            <scope>compile</scope>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-mp</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <scope>compile</scope>
-        </dependency>
+
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>

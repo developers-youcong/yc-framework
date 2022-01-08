@@ -4,10 +4,11 @@ import com.yc.common.core.base.vo.auth.UserAuthVO;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * @description: 认证
  * @author: youcong
- * @time: 2021/9/20 21:51
  */
 @Repository
 public interface AuthMapper {
@@ -21,4 +22,20 @@ public interface AuthMapper {
      */
     UserAuthVO selectUserAuthInfo(@Param("type") Integer type, @Param("account") String account);
 
+    /**
+     * 根据用户ID获取对应的角色key列表
+     *
+     * @param userId
+     * @return
+     */
+    List<String> selectUserIdByRole(@Param("userId") String userId);
+
+
+    /**
+     * 根据用户ID获取对应的角色所属菜单key
+     *
+     * @param userId
+     * @return
+     */
+    List<String> selectUserIdByPerm(@Param("userId") String userId);
 }

@@ -30,6 +30,17 @@
         <module>yc-common-crawler</module>
         <module>yc-common-elasticjob</module>
         <module>yc-common-quartz</module>
+        <module>yc-common-linktrack</module>
+        <module>yc-common-test</module>
+        <module>yc-common-cs</module>
+        <module>yc-common-monitor</module>
+        <module>yc-common-flink</module>
+        <module>yc-common-hadoop</module>
+        <module>yc-common-netty</module>
+        <module>yc-common-openfeign</module>
+        <module>yc-common-mp</module>
+        <module>yc-common-pay</module>
+        <module>yc-common-logstash</module>
     </modules>
 
 
