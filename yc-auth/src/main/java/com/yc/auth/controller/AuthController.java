@@ -58,7 +58,7 @@ public class AuthController {
             return ResultBody.fail(ResultCode.USER_OR_PASSWD_ERROR.getCode(), ResultCode.USER_OR_PASSWD_ERROR.getMsg());
         }
         if (AuthConst.FLAG_TWO_VAL.equals(flag)) {
-            String ID = ApplicationConst.DEFAULT_FLAG + resultMap.get(AuthConst.ID).toString();
+            String ID = reqDTO.getType() + ApplicationConst.DEFAULT_FLAG + resultMap.get(AuthConst.ID).toString();
             StpUtil.login(ID);
             return ResultBody.success(resultMap);
         }
