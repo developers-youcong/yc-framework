@@ -401,6 +401,30 @@
                 <version>${version}</version>
             </dependency>
 
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-eureka</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-dubbo</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-grpc</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-shardingjdbc</artifactId>
+                <version>${version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
