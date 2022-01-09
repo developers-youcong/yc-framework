@@ -41,6 +41,8 @@
         <module>yc-common-mp</module>
         <module>yc-common-pay</module>
         <module>yc-common-logstash</module>
+        <module>yc-common-nacos</module>
+        <module>yc-common-sentinel</module>
     </modules>
 
 

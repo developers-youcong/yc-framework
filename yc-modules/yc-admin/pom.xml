@@ -11,16 +11,9 @@
 
     <artifactId>yc-admin</artifactId>
     <dependencies>
-        <!-- SpringCloud Ailibaba Nacos -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
-        <!-- SpringCloud Ailibaba Nacos Config -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-nacos</artifactId>
         </dependency>
 
         <!-- SpringCloud Netflix Hystrix -->
@@ -42,10 +35,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-mp</artifactId>
         </dependency>
-
 
         <dependency>
             <groupId>com.yc.framework</groupId>
@@ -57,16 +49,6 @@
             <artifactId>yc-common-core</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <scope>compile</scope>
-        </dependency>
 
         <dependency>
             <groupId>com.yc.framework</groupId>

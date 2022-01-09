@@ -16,18 +16,9 @@
         <wx.version>4.1.0</wx.version>
     </properties>
     <dependencies>
-
-
-        <!-- SpringCloud Ailibaba Nacos -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
-        <!-- SpringCloud Ailibaba Nacos Config -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-nacos</artifactId>
         </dependency>
 
         <!-- SpringCloud Netflix Hystrix -->
@@ -40,12 +31,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!-- Mysql Connector -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>
@@ -61,11 +46,6 @@
         <dependency>
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-common-knife4j</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-activemq</artifactId>
         </dependency>
 
     </dependencies>

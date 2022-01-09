@@ -12,16 +12,9 @@
     <artifactId>yc-job</artifactId>
 
     <dependencies>
-        <!-- SpringCloud Ailibaba Nacos -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
-        <!-- SpringCloud Ailibaba Nacos Config -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-nacos</artifactId>
         </dependency>
 
         <!-- SpringCloud Netflix Hystrix -->
@@ -42,13 +35,16 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-
         <dependency>
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-common-monitor</artifactId>
         </dependency>
 
-        <!-- base -->
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-redis</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-common-core</artifactId>
@@ -58,6 +54,7 @@
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-common-quartz</artifactId>

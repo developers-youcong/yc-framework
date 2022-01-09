@@ -389,6 +389,17 @@
                 <version>${version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-nacos</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-sentinel</artifactId>
+                <version>${version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.google.guava</groupId>

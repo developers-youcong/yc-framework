@@ -11,16 +11,9 @@
 
     <artifactId>yc-auth</artifactId>
     <dependencies>
-        <!-- SpringCloud Ailibaba Nacos -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
-        <!-- SpringCloud Ailibaba Nacos Config -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-nacos</artifactId>
         </dependency>
 
         <!-- SpringCloud Netflix Hystrix -->
@@ -42,29 +35,20 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-monitor</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-common-core</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
 
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <scope>compile</scope>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-mp</artifactId>
         </dependency>
 
         <dependency>
