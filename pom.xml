@@ -425,6 +425,13 @@
                 <artifactId>yc-common-shardingjdbc</artifactId>
                 <version>${version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-shedlock</artifactId>
+                <version>${version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
