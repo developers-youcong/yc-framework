@@ -10,23 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yc.framework</groupId>
-    <artifactId>yc-common-mp</artifactId>
-
+    <artifactId>yc-common-cxf</artifactId>
+    <properties>
+        <cxf.version>3.2.4</cxf.version>
+    </properties>
     <dependencies>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-core</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <scope>compile</scope>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+            <version>${cxf.version}</version>
         </dependency>
     </dependencies>
-
 </project>

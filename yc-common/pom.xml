@@ -41,6 +41,14 @@
         <module>yc-common-mp</module>
         <module>yc-common-pay</module>
         <module>yc-common-logstash</module>
+        <module>yc-common-nacos</module>
+        <module>yc-common-sentinel</module>
+        <module>yc-common-eureka</module>
+        <module>yc-common-dubbo</module>
+        <module>yc-common-cxf</module>
+        <module>yc-common-grpc</module>
+        <module>yc-common-shardingjdbc</module>
+        <module>yc-common-shedlock</module>
     </modules>
 
 

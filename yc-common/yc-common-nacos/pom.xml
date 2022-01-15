@@ -10,22 +10,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yc.framework</groupId>
-    <artifactId>yc-common-mp</artifactId>
+    <artifactId>yc-common-nacos</artifactId>
 
     <dependencies>
+        <!-- SpringCloud Ailibaba Nacos -->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+        <!-- SpringCloud Ailibaba Nacos Config -->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-core</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <scope>compile</scope>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
     </dependencies>
 

@@ -3,10 +3,24 @@
 ## 一、理念
 致力于打造一款优秀的分布式微服务解决方案。
 
-## 二、技术架构
+## 二、特性
+- 让开发分布式微服务应用更简单；
+- 让部署分布式微服务应用更简单；
+- 集成众多行业领域优秀的解决方案；
+- 微服务更易实现高可用、高性能、高并发。 
+
+## 三、架构思想
+- 模块化；
+- 简单化；
+- 自动化；
+- 易扩展；
+- 轻量级；
+- 自由且包容。
+
+## 四、技术架构
 ![技术架构图](./doc/技术架构图-V1.0.jpg)
 
-## 三、技术选型
+## 五、技术选型
 - JDK版本：1.8；
 - 项目依赖管理：Maven3.6.2；
 - 版本控制工具：Git；
@@ -21,20 +35,28 @@
 - 数据库连接池：Druid；
 - 多数据源框架：dynamic-datasource-spring-boot-starter；
 - 限流熔断：Sentinel；
-- 分库分表中间件：MyCat；
+- 分库分表中间件：ShardingJdbc、MyCat；
 - 爬虫框架：JSOUP/WebMagic；
 - 日志框架：Lombok；
-- 服务注册与配置中心：Nacos；
 - Excel处理:Apache Poi；
-- 分布式定时任务：Quartz；
+- 分布式定时任务：Quartz、Xxl-Job、Elastic-Job、ShedLock；
 - 服务链路追踪：SpringCloud Sleuth+Zipkin；
 - Word模板引擎：Poi-tl；
-- 消息队列：Kafka；
+- 消息队列：Kafka、ActiveMQ、RabbitMQ、RocketMQ；
 - 大数据存储与计算处理：Hadoop；
 - 分布式搜索引擎：Elastic Search；
-- 文档数据库：MongoDB。
+- 文档数据库：MongoDB；
+- SOA:Apache CXF；
+- 服务注册与配置中心:Nacos、Eureka、Dubbo；
+- 支付:IJPay；
+- 微信生态支持:WxJava；
+- 多种通信支持:gRPC、HTTP等；
+- 分布式处理引擎:Apache Flink；
+- 文件存储:私有云或公有云均支持；
+- 单元测试框架:Junit；
+- 分布式事务:Seata、Tx-LCN。
 
-## 四、系统模块
+## 六、系统模块
 ````   
 ├── yc-gateway         // 网关服务 [8080]
 ├── yc-auth            // 认证服务 [8081]
@@ -67,6 +89,14 @@
 │       └── yc-common-cs                       // 对象云存储模块
 │       └── yc-common-monitor                  // 微服务监控模块
 │       └── yc-common-test                     // 单元测试模块
+│       └── yc-common-nacos                    // nacos模块
+│       └── yc-common-eureka                   // eureka模块
+│       └── yc-common-cxf                      //  webservice模块
+│       └── yc-common-sentinel                 //  sentinel模块
+│       └── yc-common-shardingjdbc             //  shardingjdbc模块
+│       └── yc-common-dubbo             //  dubbo模块
+│       └── yc-common-grpc                     //  grpc模块
+│       └── yc-common-shedlock                 //  shedlock模块
 │                         
 ├── yc-modules           // 微服务模块
 │       └── yc-admin                              // 统一用户微服务 [9000]
@@ -80,7 +110,7 @@
 ├──pom.xml                
 ````
 
-## 五、功能
+## 七、功能
 当前版本所具有的功能如下:
 
 - 用户登录/注册、登录状态、用户信息、退出；
@@ -122,27 +152,30 @@
 - 第三方支付模块化；
 - 单元测试模块化；
 - MyBatis-Plus模块化；
-- 对象云存储模块化。
+- 对象云存储模块化；
+- Nacos模块化；
+- Eureka模块化；
+- 支持SOA；
+- Sentinel模块化；
+- Shardingjdbc模块化；
+- Dubbo模块化；
+- gRPC模块化；
+- Shedlock模块化。
 
-### 本次版本V1.0.4更新
-- 鉴权模块完善角色与菜单；
-- 多账号体系构建(支持多端使用、支持多系统使用等)；
-- 网关鉴权机制完善；
-- 分布式Token完善；
-- 分布式日志管理(ELK)模块化；
-- 第三方支付模块化；
-- Hadoop模块化；
-- Flink模块化；
-- Netty模块化；
-- 爬虫模块化；
-- Feign模块化；
-- MyBatis-Plus模块化；
-- 分布式链路追踪模块化；
-- 对象云存储模块化(华为云、阿里云、腾讯云、百度云等兼容与支持)；
-- 微服务监控模块化；
-- 单元测试模块化。
+### 本次版本V1.0.5更新
+- 所有模块依赖调整；
+- 部分问题修复；
+- Nacos模块化；
+- Eureka模块化；
+- 支持SOA(即WebService)；
+- Sentinel模块化；
+- Shardingjdbc模块化；
+- Dubbo模块化；
+- gRPC模块化；
+- Shedlock模块化；
+- 文档更新V1.0.5。
 
-## 六、环境
+## 八、环境
 
 ### 1.开发环境
 - IDE:IntelliJ IDEA 2018.2+版本以上均支持；
@@ -186,7 +219,7 @@
 - 操作系统:Windows Server和Ubuntu、CenOS等均支持。
 
 
-## 七、项目启动
+## 九、项目启动
 项目启动顺序分别为:
 - yc-gateway；
 - yc-auth；
@@ -203,6 +236,13 @@
 **注意**:
 通过爬虫获取的数据只能用于个人学习研究，不能用于任何的商业用途，违反者，后果自负。
 
-## 八、官方文档
+## 十、官方文档
 文档地址:
 http://framework.youcongtech.com/
+
+官方博客:
+https://youcongtech.com/
+
+官方微信公众号:
+
+![微信公众号](http://framework.youcongtech.com/_media/wechat.jpg)

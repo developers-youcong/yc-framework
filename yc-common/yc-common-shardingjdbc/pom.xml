@@ -10,22 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yc.framework</groupId>
-    <artifactId>yc-common-mp</artifactId>
-
+    <artifactId>yc-common-shardingjdbc</artifactId>
+    <properties>
+        <sharding-jdbc.version>4.1.1</sharding-jdbc.version>
+    </properties>
     <dependencies>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-core</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <scope>compile</scope>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-core</artifactId>
+            <version>${sharding-jdbc.version}</version>
         </dependency>
     </dependencies>
 

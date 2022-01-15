@@ -10,23 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yc.framework</groupId>
-    <artifactId>yc-common-mp</artifactId>
-
+    <artifactId>yc-common-grpc</artifactId>
+    <properties>
+        <grpc.version>2.2.1.RELEASE</grpc.version>
+    </properties>
     <dependencies>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-core</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-            <scope>compile</scope>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-server-spring-boot-starter</artifactId>
+            <version>${grpc.version}</version>
         </dependency>
     </dependencies>
-
 </project>
