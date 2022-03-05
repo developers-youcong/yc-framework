@@ -3,7 +3,7 @@ package com.yc.plugins.juhe;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
@@ -72,14 +72,14 @@ public class JuheApiController {
      */
     @GetMapping("/getPhoneInfo")
     @ApiOperation("查询手机归属")
-    public ResultBody getPhoneInfo(String phone, String dtype) {
+    public RespBody getPhoneInfo(String phone, String dtype) {
         String url = "http://apis.juhe.cn/mobile/get";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("phone", phone);
         paramMap.put("key", PHONE_APPKEY);
         paramMap.put("dtype", dtype);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
     }
 
     /**
@@ -90,13 +90,13 @@ public class JuheApiController {
      */
     @GetMapping("/getIpInfo")
     @ApiOperation("IP地址")
-    public ResultBody getIpInfo(String ip) {
+    public RespBody getIpInfo(String ip) {
         String url = "http://apis.juhe.cn/ip/ipNew";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("ip", ip);
         paramMap.put("key", IP_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
 
     }
 
@@ -109,14 +109,14 @@ public class JuheApiController {
      */
     @GetMapping("/getNewsTop")
     @ApiOperation("获取新闻头条")
-    public ResultBody getNewsTop(String type) {
+    public RespBody getNewsTop(String type) {
 
         String url = "http://v.juhe.cn/toutiao/index";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("type", type);
         paramMap.put("key", NEWS_TOP_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
 
@@ -128,13 +128,13 @@ public class JuheApiController {
      */
     @GetMapping("/getWeatherforecast")
     @ApiOperation("天气预报(根据城市获取对应的天气)")
-    public ResultBody getWeatherforecast(String city) {
+    public RespBody getWeatherforecast(String city) {
         String url = "http://apis.juhe.cn/simpleWeather/query";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("city", city);
         paramMap.put("key", Weather_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(result);
+        return RespBody.success(result);
     }
 
     /**
@@ -144,12 +144,12 @@ public class JuheApiController {
      */
     @GetMapping("/getWeatherforecastCategory")
     @ApiOperation("天气预报(天气种类)")
-    public ResultBody getWeatherforecastCategory() {
+    public RespBody getWeatherforecastCategory() {
         String url = "http://apis.juhe.cn/simpleWeather/wids";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("key", Weather_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
     /**
@@ -159,12 +159,12 @@ public class JuheApiController {
      */
     @GetMapping("/getWeatherforecastSupportCity")
     @ApiOperation("天气预报(支持城市列表)")
-    public ResultBody getWeatherforecastSupportCity() {
+    public RespBody getWeatherforecastSupportCity() {
         String url = "http://apis.juhe.cn/simpleWeather/cityList";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("key", Weather_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
     /**
@@ -174,12 +174,12 @@ public class JuheApiController {
      */
     @GetMapping("/commonExchangeRateQuery")
     @ApiOperation("汇率-常用汇率查询")
-    public ResultBody commonExchangeRateQuery() {
+    public RespBody commonExchangeRateQuery() {
         String url = "http://op.juhe.cn/onebox/exchange/query";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("key", EXCHANGE_RATE_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
     /**
@@ -189,12 +189,12 @@ public class JuheApiController {
      */
     @GetMapping("/currencyList")
     @ApiOperation("汇率-货币列表")
-    public ResultBody currencyList() {
+    public RespBody currencyList() {
         String url = "http://op.juhe.cn/onebox/exchange/list";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("key", EXCHANGE_RATE_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
 
@@ -205,13 +205,13 @@ public class JuheApiController {
      */
     @GetMapping("/exchangeRate")
     @ApiOperation("汇率-实时汇率查询换算")
-    public ResultBody exchangeRate(String from, String to) {
+    public RespBody exchangeRate(String from, String to) {
         String url = "http://op.juhe.cn/onebox/exchange/currency";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("from", from);
         paramMap.put("to", to);
         paramMap.put("key", EXCHANGE_RATE_APPKEY);
-        return ResultBody.success(new JSONObject(HttpUtil.get(url, paramMap)));
+        return RespBody.success(new JSONObject(HttpUtil.get(url, paramMap)));
     }
 
     /**
@@ -221,13 +221,13 @@ public class JuheApiController {
      */
     @GetMapping("/queryEvent")
     @ApiOperation("历史上的今天-事件列表")
-    public ResultBody queryEvent(String date) {
+    public RespBody queryEvent(String date) {
         String url = "http://v.juhe.cn/todayOnhistory/queryEvent.php";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("date", date);
         paramMap.put("key", HISTORY_IN_TODAY_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
     /**
@@ -237,13 +237,13 @@ public class JuheApiController {
      */
     @GetMapping("/queryEventDetail")
     @ApiOperation("历史上的今天-事件详情")
-    public ResultBody queryEventDetail(String e_id) {
+    public RespBody queryEventDetail(String e_id) {
         String url = "http://v.juhe.cn/todayOnhistory/queryDetail.php";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("e_id", e_id);
         paramMap.put("key", HISTORY_IN_TODAY_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
     }
 
 
@@ -256,14 +256,14 @@ public class JuheApiController {
      */
     @GetMapping("/constellationGetAll")
     @ApiOperation("星座运势")
-    public ResultBody constellationGetAll(String consName, String type) {
+    public RespBody constellationGetAll(String consName, String type) {
         String url = "http://web.juhe.cn:8080/constellation/getAll";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("consName", consName);
         paramMap.put("type", type);
         paramMap.put("key", CONSTELLATION_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
     }
 
     /**
@@ -274,13 +274,13 @@ public class JuheApiController {
      */
     @GetMapping("/calendarDay")
     @ApiOperation("万年历-获取当天详细信息")
-    public ResultBody calendarDay(String date) {
+    public RespBody calendarDay(String date) {
         String url = "http://v.juhe.cn/calendar/day";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("date", date);
         paramMap.put("key", CALENDAR_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
     }
 
     /**
@@ -291,13 +291,13 @@ public class JuheApiController {
      */
     @GetMapping("/getRecentHoliday")
     @ApiOperation("万年历-获取最近假期")
-    public ResultBody getRecentHoliday(String date) {
+    public RespBody getRecentHoliday(String date) {
         String url = "http://v.juhe.cn/calendar/month";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("year-month", date);
         paramMap.put("key", CALENDAR_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
     }
 
     /**
@@ -308,13 +308,13 @@ public class JuheApiController {
      */
     @GetMapping("/getCurrentYearHolidayList")
     @ApiOperation("万年历-获取当年的假期列表")
-    public ResultBody getCurrentYearHolidayList(String year) {
+    public RespBody getCurrentYearHolidayList(String year) {
         String url = "http://v.juhe.cn/calendar/year";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("year", year);
         paramMap.put("key", CALENDAR_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
     /**
@@ -325,13 +325,13 @@ public class JuheApiController {
      */
     @GetMapping("/testQQJiXiong")
     @ApiOperation("测试QQ吉凶")
-    public ResultBody testQQJiXiong(String qq) {
+    public RespBody testQQJiXiong(String qq) {
         String url = "http://japi.juhe.cn/qqevaluate/qq";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("qq", qq);
         paramMap.put("key", QQ_TEST_LOCK_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
     }
 
     /**
@@ -345,7 +345,7 @@ public class JuheApiController {
      */
     @GetMapping("/jokeContentList")
     @ApiOperation("按更新时间查询笑话")
-    public ResultBody jokeContentList(Integer page, Integer pageSize, String sort, String time) {
+    public RespBody jokeContentList(Integer page, Integer pageSize, String sort, String time) {
         String url = "http://v.juhe.cn/joke/content/list.php";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("page", page);
@@ -354,7 +354,7 @@ public class JuheApiController {
         paramMap.put("time", time);
         paramMap.put("key", JOKE_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
 
@@ -367,14 +367,14 @@ public class JuheApiController {
      */
     @GetMapping("/latestJokeContent")
     @ApiOperation("最新笑话")
-    public ResultBody latestJokeContent(Integer page, Integer pageSize) {
+    public RespBody latestJokeContent(Integer page, Integer pageSize) {
         String url = "http://v.juhe.cn/joke/content/text.php";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("page", page);
         paramMap.put("pageSize", pageSize);
         paramMap.put("key", JOKE_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
     /**
@@ -384,12 +384,12 @@ public class JuheApiController {
      */
     @GetMapping("/randJoke")
     @ApiOperation("随机笑话")
-    public ResultBody randJoke() {
+    public RespBody randJoke() {
         String url = "http://v.juhe.cn/joke/randJoke.php";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("key", JOKE_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
     }
 
     /**
@@ -400,13 +400,13 @@ public class JuheApiController {
      */
     @GetMapping("/goodBookCategoryLog")
     @ApiOperation("图书分类目录")
-    public ResultBody goodBookCategoryLog(String type) {
+    public RespBody goodBookCategoryLog(String type) {
         String url = "http://apis.juhe.cn/goodbook/catalog";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("type", type);
         paramMap.put("key", BOOK_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
 
@@ -420,7 +420,7 @@ public class JuheApiController {
      */
     @GetMapping("/goodBookQuery")
     @ApiOperation("图书内容")
-    public ResultBody goodBookQuery(Integer catalog_id, Integer pn, Integer rn) {
+    public RespBody goodBookQuery(Integer catalog_id, Integer pn, Integer rn) {
         String url = "http://apis.juhe.cn/goodbook/query";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("catalog_id", catalog_id);
@@ -429,7 +429,7 @@ public class JuheApiController {
         paramMap.put("dtype", "json");
         paramMap.put("key", BOOK_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
     /**
@@ -440,13 +440,13 @@ public class JuheApiController {
      */
     @GetMapping("/dreamCategory")
     @ApiOperation("周公解密-类型")
-    public ResultBody dreamCategory(String fid) {
+    public RespBody dreamCategory(String fid) {
         String url = "http://v.juhe.cn/dream/category";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("fid", fid);
         paramMap.put("key", DREAM_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONArray(result));
+        return RespBody.success(new JSONArray(result));
     }
 
 
@@ -460,7 +460,7 @@ public class JuheApiController {
      */
     @GetMapping("/dreamQuery")
     @ApiOperation("周公解梦-解梦查询")
-    public ResultBody dreamQuery(String q, String cid, String full) {
+    public RespBody dreamQuery(String q, String cid, String full) {
         String url = "http://v.juhe.cn/dream/query";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("q", q);
@@ -468,7 +468,7 @@ public class JuheApiController {
         paramMap.put("full", full);
         paramMap.put("key", DREAM_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
     }
 
     /**
@@ -479,12 +479,12 @@ public class JuheApiController {
      */
     @GetMapping("/dreamQueryId")
     @ApiOperation("周公解梦-根据ID查询解梦信息")
-    public ResultBody dreamQueryId(String id) {
+    public RespBody dreamQueryId(String id) {
         String url = "http://v.juhe.cn/dream/queryid";//请求接口地址
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("id", id);
         paramMap.put("key", DREAM_APPKEY);
         String result = HttpUtil.get(url, paramMap);
-        return ResultBody.success(new JSONObject(result));
+        return RespBody.success(new JSONObject(result));
     }
 }

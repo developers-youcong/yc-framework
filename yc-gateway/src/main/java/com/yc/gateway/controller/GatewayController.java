@@ -1,10 +1,8 @@
 package com.yc.gateway.controller;
 
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.PostConstruct;
 
 /**
  * @description:
@@ -14,7 +12,7 @@ import javax.annotation.PostConstruct;
 @RestController
 public class GatewayController {
     @PostMapping("/")
-    public ResultBody index() {
-        return ResultBody.success();
+    public RespBody index() {
+        return RespBody.success();
     }
 }

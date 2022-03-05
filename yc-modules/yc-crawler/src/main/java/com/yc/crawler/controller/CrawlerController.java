@@ -10,7 +10,7 @@ import com.yc.api.CnBlogsApi;
 import com.yc.common.core.base.dto.crawler.PostCrawlerReqDTO;
 import com.yc.common.core.base.dto.crawler.UserCrawlerReqDTO;
 import com.yc.common.core.base.enums.ResultCode;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import com.yc.common.core.base.utils.JbcryptUtil;
 import com.yc.common.core.base.utils.thread.ThreadPoolUtil;
 import com.yc.crawler.mapper.CrawlerMapper;
@@ -55,7 +55,7 @@ public class CrawlerController {
      */
     @PostMapping("/zq_city_hour")
     @ApiOperation("真气网-城市小时级数据抓取")
-    public ResultBody zq_city_hour() {
+    public RespBody zq_city_hour() {
 
         ExecutorService executorService = ThreadPoolUtil.getThreadPool();
 
@@ -69,7 +69,7 @@ public class CrawlerController {
             }
         });
 
-        return ResultBody.success();
+        return RespBody.success();
     }
 
 
@@ -78,7 +78,7 @@ public class CrawlerController {
      */
     @PostMapping("/cnblog_user")
     @ApiOperation("基于博客园用户相关的文章抓取")
-    public ResultBody cnblog_user() {
+    public RespBody cnblog_user() {
         try {
             ExecutorService executorService = ThreadPoolUtil.getThreadPool();
 
@@ -87,14 +87,14 @@ public class CrawlerController {
                 cnBlogsApi.getToken();
                 List<String> dataList = postCrawlerMapper.selectAllUserName(8L);
                 for (String str : dataList) {
-                    ResultBody resultBody01 = cnBlogsApi.getPersonalBlogInfo(str);
+                    RespBody resultBody01 = cnBlogsApi.getPersonalBlogInfo(str);
                     if (ResultCode.SELECT_SUCCESS.getCode().equals(resultBody01.getCode())) {
                         JSONObject jsonObject = new JSONObject(resultBody01.getData());
                         int totalCount = Integer.parseInt(jsonObject.get("postCount").toString());
                         int pageSize = 10;
                         int computer = totalCount / pageSize;
                         for (int i = 0; i < computer; i++) {
-                            ResultBody resultBody02 = cnBlogsApi.getPersonalBlogPostList(str, i);
+                            RespBody resultBody02 = cnBlogsApi.getPersonalBlogPostList(str, i);
                             JSONArray jsonArray = new JSONArray(resultBody02.getData());
                             List<PostCrawlerReqDTO> postCrawlerReqDTOList = handleDataDetail(jsonArray);
                             if (!postCrawlerReqDTOList.isEmpty()) {
@@ -109,7 +109,7 @@ public class CrawlerController {
             e.printStackTrace();
         }
 
-        return ResultBody.success();
+        return RespBody.success();
     }
 
     /**
@@ -117,7 +117,7 @@ public class CrawlerController {
      */
     @PostMapping("/cnblogs_home")
     @ApiOperation("博客园首页文章抓取")
-    public ResultBody cnblogs_home() {
+    public RespBody cnblogs_home() {
         ExecutorService executorService = ThreadPoolUtil.getThreadPool();
         executorService.execute(() -> {
             int totalCount = 200;
@@ -125,7 +125,7 @@ public class CrawlerController {
             cnBlogsApi.getToken();
             //具体数据抓取
             for (int i = 1; i < totalCount; i++) {
-                ResultBody resultBody = cnBlogsApi.getSiteHomePostList(String.valueOf(i), String.valueOf("10"));
+                RespBody resultBody = cnBlogsApi.getSiteHomePostList(String.valueOf(i), String.valueOf("10"));
                 Console.log("数据入库");
                 JSONArray jsonArray = new JSONArray(resultBody.getData());
                 List<PostCrawlerReqDTO> postCrawlerReqDTOList = handleDataDetail(jsonArray);
@@ -135,7 +135,7 @@ public class CrawlerController {
             }
         });
 
-        return ResultBody.success();
+        return RespBody.success();
     }
 
 
@@ -144,7 +144,7 @@ public class CrawlerController {
      */
     @PostMapping("/cnblog_es")
     @ApiOperation("博客园精品文章抓取")
-    public ResultBody cnblog_es() {
+    public RespBody cnblog_es() {
         ExecutorService executorService = ThreadPoolUtil.getThreadPool();
         executorService.execute(() -> {
             int totalCount = 160;
@@ -152,7 +152,7 @@ public class CrawlerController {
             cnBlogsApi.getToken();
             //具体数据抓取
             for (int i = 1; i < totalCount; i++) {
-                ResultBody resultBody = cnBlogsApi.getEssenceAreaPostList(String.valueOf(i), String.valueOf("10"));
+                RespBody resultBody = cnBlogsApi.getEssenceAreaPostList(String.valueOf(i), String.valueOf("10"));
                 Console.log("数据入库");
                 JSONArray jsonArray = new JSONArray(resultBody.getData());
                 List<PostCrawlerReqDTO> postCrawlerReqDTOList = handleDataDetail(jsonArray);
@@ -161,7 +161,7 @@ public class CrawlerController {
                 }
             }
         });
-        return ResultBody.success();
+        return RespBody.success();
     }
 
     /**

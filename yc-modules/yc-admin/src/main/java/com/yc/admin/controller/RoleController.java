@@ -4,7 +4,7 @@ import com.yc.admin.service.RoleService;
 import com.yc.common.core.base.dto.admin.RoleAddOrUpdateReqDTO;
 import com.yc.common.core.base.dto.admin.RoleDelReqDTO;
 import com.yc.common.core.base.dto.admin.RolePageReqDTO;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -34,9 +34,9 @@ public class RoleController {
      */
     @PostMapping("/role/queryPageList")
     @ApiOperation("获取角色列表")
-    public ResultBody queryPageList(@RequestBody RolePageReqDTO reqDTO) {
+    public RespBody queryPageList(@RequestBody RolePageReqDTO reqDTO) {
         log.info("/role/queryPageList:" + reqDTO);
-        return ResultBody.success(roleService.queryRolePageList(reqDTO));
+        return RespBody.success(roleService.queryRolePageList(reqDTO));
     }
 
 
@@ -48,9 +48,9 @@ public class RoleController {
      */
     @PostMapping("/role/saveOrUpdate")
     @ApiOperation("新增或修改角色")
-    public ResultBody saveOrUpdate(@RequestBody RoleAddOrUpdateReqDTO reqDTO) {
+    public RespBody saveOrUpdate(@RequestBody RoleAddOrUpdateReqDTO reqDTO) {
         log.info("/user/saveOrUpdate:" + reqDTO);
-        return ResultBody.success(roleService.saveOrUpdate(reqDTO));
+        return RespBody.success(roleService.saveOrUpdate(reqDTO));
     }
 
     /**
@@ -61,9 +61,9 @@ public class RoleController {
      */
     @PostMapping("/role/del")
     @ApiOperation("删除角色")
-    public ResultBody del(@RequestBody RoleDelReqDTO reqDTO) {
+    public RespBody del(@RequestBody RoleDelReqDTO reqDTO) {
         log.info("/role/del");
-        return ResultBody.success(roleService.del(reqDTO));
+        return RespBody.success(roleService.del(reqDTO));
     }
 
 }

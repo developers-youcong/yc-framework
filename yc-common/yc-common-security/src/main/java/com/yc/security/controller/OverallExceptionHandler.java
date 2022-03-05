@@ -1,11 +1,10 @@
 package com.yc.security.controller;
 
-import cn.dev33.satoken.exception.DisableLoginException;
 import cn.dev33.satoken.exception.NotLoginException;
 import cn.dev33.satoken.exception.NotPermissionException;
 import cn.dev33.satoken.exception.NotRoleException;
 import com.yc.common.core.base.enums.ResultCode;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -30,7 +29,7 @@ public class OverallExceptionHandler {
      * @return
      */
     @ExceptionHandler(value = NotLoginException.class)
-    public ResultBody handUserExceptionHandler(NotLoginException e) {
+    public RespBody handUserExceptionHandler(NotLoginException e) {
         e.printStackTrace();
         // 判断场景值，定制化异常信息
         String message = "";
@@ -47,7 +46,7 @@ public class OverallExceptionHandler {
         } else {
             message = "当前会话未登录";
         }
-        return ResultBody.fail(ResultCode.TOKEN_ERROR.getCode(), message);
+        return RespBody.fail(ResultCode.TOKEN_ERROR.getCode(), message);
     }
 
     /**
@@ -57,9 +56,9 @@ public class OverallExceptionHandler {
      * @return
      */
     @ExceptionHandler(value = NotPermissionException.class)
-    public ResultBody handNotPermissionExceptionHandler(NotPermissionException e) {
+    public RespBody handNotPermissionExceptionHandler(NotPermissionException e) {
         e.printStackTrace();
-        return ResultBody.fail(ResultCode.PERM_ERROR.getCode(), e.getMessage());
+        return RespBody.fail(ResultCode.PERM_ERROR.getCode(), e.getMessage());
     }
 
     /**
@@ -69,9 +68,9 @@ public class OverallExceptionHandler {
      * @return
      */
     @ExceptionHandler(value = NotRoleException.class)
-    public ResultBody handNotNotRoleExceptionHandler(NotRoleException e) {
+    public RespBody handNotNotRoleExceptionHandler(NotRoleException e) {
         e.printStackTrace();
-        return ResultBody.fail(ResultCode.ROLE_ERROR.getCode(), e.getMessage());
+        return RespBody.fail(ResultCode.ROLE_ERROR.getCode(), e.getMessage());
     }
 
 }

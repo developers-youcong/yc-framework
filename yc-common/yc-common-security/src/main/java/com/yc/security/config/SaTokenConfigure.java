@@ -2,15 +2,13 @@ package com.yc.security.config;
 
 import cn.dev33.satoken.interceptor.SaRouteInterceptor;
 import cn.dev33.satoken.router.SaRouter;
-import cn.dev33.satoken.router.SaRouterUtil;
 import cn.dev33.satoken.stp.StpInterface;
 import cn.dev33.satoken.stp.StpUtil;
 import com.yc.api.UserApi;
 import com.yc.common.core.base.constant.ApplicationConst;
 import com.yc.common.core.base.dto.auth.UserIdReqDTO;
 import com.yc.common.core.base.enums.ResultCode;
-import com.yc.common.core.base.result.ResultBody;
-import feign.Request;
+import com.yc.common.core.base.result.RespBody;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +16,6 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -60,7 +57,7 @@ public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
         List<String> permList = new ArrayList<>();
         UserIdReqDTO permReq = new UserIdReqDTO();
         permReq.setUserId(handleUserId(loginId.toString()));
-        ResultBody<List<String>> resultBody = userApi.getPerm(permReq);
+        RespBody<List<String>> resultBody = userApi.getPerm(permReq);
         if (ResultCode.SELECT_SUCCESS.getCode().equals(resultBody.getCode())) {
             permList = resultBody.getData();
         }
@@ -73,7 +70,7 @@ public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
         List<String> roleList = new ArrayList<>();
         UserIdReqDTO permReq = new UserIdReqDTO();
         permReq.setUserId(handleUserId(loginId.toString()));
-        ResultBody<List<String>> resultBody = userApi.getRole(permReq);
+        RespBody<List<String>> resultBody = userApi.getRole(permReq);
         if (ResultCode.SELECT_SUCCESS.getCode().equals(resultBody.getCode())) {
             roleList = resultBody.getData();
         }

@@ -2,7 +2,7 @@ package com.yc.cms.controller;
 
 import com.yc.cms.service.PostService;
 import com.yc.common.core.base.dto.cms.PostPageReqDTO;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -32,8 +32,8 @@ public class PostController {
      */
     @PostMapping("/post/queryPageList")
     @ApiOperation("获取文章列表")
-    public ResultBody queryPageList(@RequestBody PostPageReqDTO reqDTO) {
+    public RespBody queryPageList(@RequestBody PostPageReqDTO reqDTO) {
         log.info("/post/queryPageList:" + reqDTO);
-        return ResultBody.success(postService.queryPostPageList(reqDTO));
+        return RespBody.success(postService.queryPostPageList(reqDTO));
     }
 }

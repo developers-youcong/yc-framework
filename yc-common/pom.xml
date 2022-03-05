@@ -49,6 +49,7 @@
         <module>yc-common-grpc</module>
         <module>yc-common-shardingjdbc</module>
         <module>yc-common-shedlock</module>
+        <module>yc-common-drools</module>
     </modules>
 
 
