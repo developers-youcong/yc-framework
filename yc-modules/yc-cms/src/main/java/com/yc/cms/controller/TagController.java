@@ -1,11 +1,10 @@
 package com.yc.cms.controller;
 
 import com.yc.cms.service.TagService;
-import com.yc.common.core.base.dto.cms.CategoryPageReqDTO;
 import com.yc.common.core.base.dto.cms.TagAddOrUpdateReqDTO;
 import com.yc.common.core.base.dto.cms.TagChangeStatusReqDTO;
 import com.yc.common.core.base.dto.cms.TagPageReqDTO;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -35,9 +34,9 @@ public class TagController {
      */
     @PostMapping("/tag/queryPageList")
     @ApiOperation("获取标签列表")
-    public ResultBody queryPageList(@RequestBody TagPageReqDTO reqDTO) {
+    public RespBody queryPageList(@RequestBody TagPageReqDTO reqDTO) {
         log.info("/tag/queryPageList:" + reqDTO);
-        return ResultBody.success(tagService.queryTagPageList(reqDTO));
+        return RespBody.success(tagService.queryTagPageList(reqDTO));
     }
 
 
@@ -49,9 +48,9 @@ public class TagController {
      */
     @PostMapping("/tag/saveOrUpdate")
     @ApiOperation("新增或修改标签")
-    public ResultBody saveOrUpdate(@RequestBody TagAddOrUpdateReqDTO reqDTO) {
+    public RespBody saveOrUpdate(@RequestBody TagAddOrUpdateReqDTO reqDTO) {
         log.info("/tag/saveOrUpdate:" + reqDTO);
-        return ResultBody.success(tagService.saveOrUpdateTag(reqDTO));
+        return RespBody.success(tagService.saveOrUpdateTag(reqDTO));
     }
 
 
@@ -63,8 +62,8 @@ public class TagController {
      */
     @PostMapping("/tag/changeTagStatus")
     @ApiOperation("标签状态修改(禁用/删除)")
-    public ResultBody changeCategoryStatus(@RequestBody TagChangeStatusReqDTO reqDTO) {
+    public RespBody changeCategoryStatus(@RequestBody TagChangeStatusReqDTO reqDTO) {
         log.info("/tag/changeTagStatus:" + reqDTO);
-        return ResultBody.success(tagService.changeTagStatus(reqDTO));
+        return RespBody.success(tagService.changeTagStatus(reqDTO));
     }
 }

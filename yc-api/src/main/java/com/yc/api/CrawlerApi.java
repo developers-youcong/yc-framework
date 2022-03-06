@@ -1,7 +1,7 @@
 package com.yc.api;
 
 import com.yc.common.core.base.constant.ApplicationConst;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -19,7 +19,7 @@ public interface CrawlerApi {
      * @return
      */
     @PostMapping("/dataCrawler/zq_city_hour")
-    ResultBody zq_city_hour();
+    RespBody zq_city_hour();
 
     /**
      * 基于博客园用户相关的文章抓取
@@ -27,7 +27,7 @@ public interface CrawlerApi {
      * @return
      */
     @PostMapping("/dataCrawler/cnblog_user")
-    ResultBody cnblog_user();
+    RespBody cnblog_user();
 
     /**
      * 博客园首页文章抓取
@@ -35,7 +35,7 @@ public interface CrawlerApi {
      * @return
      */
     @PostMapping("/dataCrawler/cnblogs_home")
-    ResultBody cnblogs_home();
+    RespBody cnblogs_home();
 
     /**
      * 博客园精品文章抓取
@@ -43,5 +43,5 @@ public interface CrawlerApi {
      * @return
      */
     @PostMapping("/dataCrawler/cnblog_es")
-    ResultBody cnblog_es();
+    RespBody cnblog_es();
 }

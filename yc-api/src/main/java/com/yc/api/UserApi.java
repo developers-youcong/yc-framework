@@ -2,7 +2,7 @@ package com.yc.api;
 
 import com.yc.common.core.base.constant.ApplicationConst;
 import com.yc.common.core.base.dto.auth.UserIdReqDTO;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +23,7 @@ public interface UserApi {
      * @return
      */
     @PostMapping("/auth/getPerm")
-    ResultBody<List<String>> getPerm(@RequestBody UserIdReqDTO reqDTO);
+    RespBody<List<String>> getPerm(@RequestBody UserIdReqDTO reqDTO);
 
     /**
      * 获取用户对应的角色
@@ -32,5 +32,5 @@ public interface UserApi {
      * @return
      */
     @PostMapping("/auth/getRole")
-    ResultBody<List<String>> getRole(@RequestBody UserIdReqDTO reqDTO);
+    RespBody<List<String>> getRole(@RequestBody UserIdReqDTO reqDTO);
 }

@@ -1,7 +1,7 @@
 package com.yc.gateway.handle;
 
 import com.alibaba.fastjson.JSON;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler;
@@ -51,7 +51,7 @@ public class GatewayExceptionHandler implements ErrorWebExceptionHandler {
         response.setStatusCode(HttpStatus.OK);
         return response.writeWith(Mono.fromSupplier(() -> {
             DataBufferFactory bufferFactory = response.bufferFactory();
-            return bufferFactory.wrap(JSON.toJSONBytes(ResultBody.fail(msg)));
+            return bufferFactory.wrap(JSON.toJSONBytes(RespBody.fail(msg)));
         }));
     }
 }

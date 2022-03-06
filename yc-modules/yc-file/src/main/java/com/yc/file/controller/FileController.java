@@ -5,7 +5,7 @@ import com.yc.common.core.base.dto.file.FileAddOrUpdateReqDTO;
 import com.yc.common.core.base.dto.file.FileDelReqDTO;
 import com.yc.common.core.base.dto.file.FilePageReqDTO;
 import com.yc.common.core.base.enums.ResultCode;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import com.yc.common.core.base.utils.file.FileUtil;
 import com.yc.file.service.FileService;
 import io.swagger.annotations.Api;
@@ -40,9 +40,9 @@ public class FileController {
      */
     @PostMapping("/file/queryFilePageList")
     @ApiOperation("文件管理-获取文件列表")
-    public ResultBody queryPageList(@RequestBody FilePageReqDTO reqDTO) {
+    public RespBody queryPageList(@RequestBody FilePageReqDTO reqDTO) {
         log.info("/file/queryFilePageList:" + reqDTO);
-        return ResultBody.success(fileService.queryFilePageList(reqDTO));
+        return RespBody.success(fileService.queryFilePageList(reqDTO));
     }
 
     /**
@@ -54,11 +54,11 @@ public class FileController {
      */
     @PostMapping("/file/upload")
     @ApiOperation("文件管理-上传文件(基于本地文件服务器)")
-    public ResultBody uploadFile(@RequestParam("file") MultipartFile file) throws Exception {
+    public RespBody uploadFile(@RequestParam("file") MultipartFile file) throws Exception {
         if (file.isEmpty()) {
-            return ResultBody.fail(ResultCode.ILLEGAL_PARAMETER_ERROR.getCode(), ResultCode.ILLEGAL_PARAMETER_ERROR.getMsg());
+            return RespBody.fail(ResultCode.ILLEGAL_PARAMETER_ERROR.getCode(), ResultCode.ILLEGAL_PARAMETER_ERROR.getMsg());
         }
-        return ResultBody.success(FileUtil.uploadFile("127.0.0.1", "D:/usr/file/", "/home/tech", file));
+        return RespBody.success(FileUtil.uploadFile("127.0.0.1", "D:/usr/file/", "/home/tech", file));
     }
 
     /**
@@ -69,11 +69,11 @@ public class FileController {
      */
     @PostMapping("/file/saveOrUpdate")
     @ApiOperation("文件管理-添加或修改")
-    public ResultBody saveOrUpdate(@RequestBody FileAddOrUpdateReqDTO reqDTO) {
+    public RespBody saveOrUpdate(@RequestBody FileAddOrUpdateReqDTO reqDTO) {
         if (StrUtil.isEmpty(reqDTO.getFileUrl()) || reqDTO.getFileStatus() == null || reqDTO.getFileType() == null) {
-            return ResultBody.fail(ResultCode.ILLEGAL_PARAMETER_ERROR.getCode(), ResultCode.ILLEGAL_PARAMETER_ERROR.getMsg());
+            return RespBody.fail(ResultCode.ILLEGAL_PARAMETER_ERROR.getCode(), ResultCode.ILLEGAL_PARAMETER_ERROR.getMsg());
         }
-        return ResultBody.success(fileService.saveOrUpdate(reqDTO));
+        return RespBody.success(fileService.saveOrUpdate(reqDTO));
     }
 
     /**
@@ -84,8 +84,8 @@ public class FileController {
      */
     @PostMapping("/file/del")
     @ApiOperation("文件管理-删除")
-    public ResultBody del(@RequestBody FileDelReqDTO reqDTO) {
-        return ResultBody.success(fileService.removeById(reqDTO.getFileId()));
+    public RespBody del(@RequestBody FileDelReqDTO reqDTO) {
+        return RespBody.success(fileService.removeById(reqDTO.getFileId()));
     }
 
 }

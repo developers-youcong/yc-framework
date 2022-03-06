@@ -1,7 +1,7 @@
 package com.yc.api;
 
 import com.yc.common.core.base.constant.ApplicationConst;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(contextId = "cnBlogsApi",name = ApplicationConst.PLUGINS)
 public interface CnBlogsApi {
     @PostMapping("/cnblogs/getToken")
-    ResultBody getToken();
+    RespBody getToken();
 
     @PostMapping("/cnblogs/getPersonalBlogInfo")
-    ResultBody getPersonalBlogInfo(@RequestParam("username") String username);
+    RespBody getPersonalBlogInfo(@RequestParam("username") String username);
 
     @PostMapping("/cnblogs/getPersonalBlogPostList")
-    ResultBody getPersonalBlogPostList(@RequestParam("userName") String userName, @RequestParam("pageIndex") Integer pageIndex);
+    RespBody getPersonalBlogPostList(@RequestParam("userName") String userName, @RequestParam("pageIndex") Integer pageIndex);
 
     @PostMapping("/cnblogs/getEssenceAreaPostList")
-    ResultBody getEssenceAreaPostList(@RequestParam("pageIndex") String pageIndex,@RequestParam("pageSize") String pageSize);
+    RespBody getEssenceAreaPostList(@RequestParam("pageIndex") String pageIndex, @RequestParam("pageSize") String pageSize);
 
     @PostMapping("/cnblogs/getSiteHomePostList")
-    ResultBody getSiteHomePostList(@RequestParam("pageIndex") String pageIndex,@RequestParam("pageSize") String pageSize);
+    RespBody getSiteHomePostList(@RequestParam("pageIndex") String pageIndex, @RequestParam("pageSize") String pageSize);
 }

@@ -1,25 +1,10 @@
 package com.yc.wechat.controller;
 
-import com.sun.javafx.collections.MappingChange;
-import com.yc.common.core.base.result.ResultBody;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
-import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.common.session.WxSessionManager;
-import me.chanjar.weixin.mp.api.WxMpMessageHandler;
-import me.chanjar.weixin.mp.api.WxMpMessageRouter;
 import me.chanjar.weixin.mp.api.WxMpService;
-import me.chanjar.weixin.mp.api.WxMpTemplateMsgService;
 import me.chanjar.weixin.mp.api.impl.WxMpServiceImpl;
-import me.chanjar.weixin.mp.api.impl.WxMpTemplateMsgServiceImpl;
-import me.chanjar.weixin.mp.bean.message.WxMpXmlMessage;
-import me.chanjar.weixin.mp.bean.message.WxMpXmlOutMessage;
-import me.chanjar.weixin.mp.bean.message.WxMpXmlOutTextMessage;
-import me.chanjar.weixin.mp.bean.result.WxMpMassSendResult;
-import me.chanjar.weixin.mp.bean.template.WxMpTemplateData;
-import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
 import me.chanjar.weixin.mp.config.impl.WxMpDefaultConfigImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,9 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @description:

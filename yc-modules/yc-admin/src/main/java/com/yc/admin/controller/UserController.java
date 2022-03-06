@@ -5,7 +5,7 @@ import com.yc.admin.service.UserService;
 import com.yc.common.core.base.constant.UserConst;
 import com.yc.common.core.base.dto.admin.*;
 import com.yc.common.core.base.entity.admin.UserEntity;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import com.yc.common.core.base.utils.JbcryptUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -36,9 +36,9 @@ public class UserController {
      */
     @PostMapping("/user/queryPageList")
     @ApiOperation("获取用户列表")
-    public ResultBody queryPageList(@RequestBody UserPageReqDTO reqDTO) {
+    public RespBody queryPageList(@RequestBody UserPageReqDTO reqDTO) {
         log.info("/user/queryPageList:" + reqDTO);
-        return ResultBody.success(userService.queryUserPageList(reqDTO));
+        return RespBody.success(userService.queryUserPageList(reqDTO));
     }
 
     /**
@@ -49,9 +49,9 @@ public class UserController {
      */
     @PostMapping("/user/saveOrUpdate")
     @ApiOperation("新增或修改用户")
-    public ResultBody saveOrUpdate(@RequestBody UserAddOrUpdateReqDTO reqDTO) {
+    public RespBody saveOrUpdate(@RequestBody UserAddOrUpdateReqDTO reqDTO) {
         log.info("/user/saveOrUpdate:" + reqDTO);
-        return ResultBody.success(userService.saveOrUpdateUser(reqDTO));
+        return RespBody.success(userService.saveOrUpdateUser(reqDTO));
     }
 
     /**
@@ -62,9 +62,9 @@ public class UserController {
      */
     @PostMapping("/user/del")
     @ApiOperation("删除用户")
-    public ResultBody del(@RequestBody UserDelReqDTO reqDTO) {
+    public RespBody del(@RequestBody UserDelReqDTO reqDTO) {
         log.info("/user/del");
-        return ResultBody.success(userService.changeUserStatus(reqDTO.getUserId(), UserConst.USER_STATUS_DEL));
+        return RespBody.success(userService.changeUserStatus(reqDTO.getUserId(), UserConst.USER_STATUS_DEL));
     }
 
     /**
@@ -75,9 +75,9 @@ public class UserController {
      */
     @PostMapping("/user/forbid")
     @ApiOperation("禁用用户")
-    public ResultBody forbid(@RequestBody UserDelReqDTO reqDTO) {
+    public RespBody forbid(@RequestBody UserDelReqDTO reqDTO) {
         log.info("/user/forbid");
-        return ResultBody.success(userService.changeUserStatus(reqDTO.getUserId(), UserConst.USER_STATUS_FORBID));
+        return RespBody.success(userService.changeUserStatus(reqDTO.getUserId(), UserConst.USER_STATUS_FORBID));
     }
 
 
@@ -89,9 +89,9 @@ public class UserController {
      */
     @PostMapping("/user/getById")
     @ApiOperation("获取用户信息")
-    public ResultBody getById(@RequestBody UserOneReqDTO reqDTO) {
+    public RespBody getById(@RequestBody UserOneReqDTO reqDTO) {
         log.info("/user/getById");
-        return ResultBody.success(userService.selectUserOne(reqDTO));
+        return RespBody.success(userService.selectUserOne(reqDTO));
     }
 
 
@@ -103,17 +103,17 @@ public class UserController {
      */
     @PostMapping("/user/oldPwdValidate")
     @ApiOperation("验证旧密码是否正确")
-    public ResultBody oldPwdValidate(@RequestBody UserOldPwdValidReqDTO reqDTO) {
+    public RespBody oldPwdValidate(@RequestBody UserOldPwdValidReqDTO reqDTO) {
         log.info("/user/oldPwdValidate");
         UserEntity userEntity = userService.getById(reqDTO.getUserId());
         if (!StrUtil.isEmpty(userEntity.getId())) {
             if (JbcryptUtil.checkPwd(reqDTO.getOldPwd(), userEntity.getPassword())) {
-                return ResultBody.success(true);
+                return RespBody.success(true);
             } else {
-                return ResultBody.success(false);
+                return RespBody.success(false);
             }
         }
-        return ResultBody.success(false);
+        return RespBody.success(false);
     }
 
     /**
@@ -124,7 +124,7 @@ public class UserController {
      */
     @PostMapping("/user/changePwd")
     @ApiOperation("修改密码")
-    public ResultBody changePwd(@RequestBody UserChangePwdReqDTO reqDTO) {
-        return ResultBody.success(userService.changePwd(reqDTO));
+    public RespBody changePwd(@RequestBody UserChangePwdReqDTO reqDTO) {
+        return RespBody.success(userService.changePwd(reqDTO));
     }
 }

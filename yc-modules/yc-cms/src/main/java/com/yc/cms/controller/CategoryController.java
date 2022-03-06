@@ -4,7 +4,7 @@ import com.yc.cms.service.CategoryService;
 import com.yc.common.core.base.dto.cms.CategoryAddOrUpdateReqDTO;
 import com.yc.common.core.base.dto.cms.CategoryChangeStatusReqDTO;
 import com.yc.common.core.base.dto.cms.CategoryPageReqDTO;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -34,9 +34,9 @@ public class CategoryController {
      */
     @PostMapping("/category/queryPageList")
     @ApiOperation("获取分类列表")
-    public ResultBody queryPageList(@RequestBody CategoryPageReqDTO reqDTO) {
+    public RespBody queryPageList(@RequestBody CategoryPageReqDTO reqDTO) {
         log.info("/category/queryPageList:" + reqDTO);
-        return ResultBody.success(categoryService.queryCategoryPageList(reqDTO));
+        return RespBody.success(categoryService.queryCategoryPageList(reqDTO));
     }
 
 
@@ -48,9 +48,9 @@ public class CategoryController {
      */
     @PostMapping("/category/saveOrUpdate")
     @ApiOperation("新增或修改分类")
-    public ResultBody saveOrUpdate(@RequestBody CategoryAddOrUpdateReqDTO reqDTO) {
+    public RespBody saveOrUpdate(@RequestBody CategoryAddOrUpdateReqDTO reqDTO) {
         log.info("/category/saveOrUpdate:" + reqDTO);
-        return ResultBody.success(categoryService.saveOrUpdateCategory(reqDTO));
+        return RespBody.success(categoryService.saveOrUpdateCategory(reqDTO));
     }
 
 
@@ -62,8 +62,8 @@ public class CategoryController {
      */
     @PostMapping("/category/changeCategoryStatus")
     @ApiOperation("分类状态修改(禁用/删除)")
-    public ResultBody changeCategoryStatus(@RequestBody CategoryChangeStatusReqDTO reqDTO) {
+    public RespBody changeCategoryStatus(@RequestBody CategoryChangeStatusReqDTO reqDTO) {
         log.info("/category/changeCategoryStatus:" + reqDTO);
-        return ResultBody.success(categoryService.changeCategoryStatus(reqDTO));
+        return RespBody.success(categoryService.changeCategoryStatus(reqDTO));
     }
 }

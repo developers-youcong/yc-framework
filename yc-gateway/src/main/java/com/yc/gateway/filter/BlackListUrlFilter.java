@@ -1,7 +1,7 @@
 package com.yc.gateway.filter;
 
 import com.alibaba.fastjson.JSON;
-import com.yc.common.core.base.result.ResultBody;
+import com.yc.common.core.base.result.RespBody;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.http.server.reactive.ServerHttpResponse;
@@ -30,7 +30,7 @@ public class BlackListUrlFilter extends AbstractGatewayFilterFactory<BlackListUr
             {
                 ServerHttpResponse response = exchange.getResponse();
                 return exchange.getResponse().writeWith(
-                        Mono.just(response.bufferFactory().wrap(JSON.toJSONBytes(ResultBody.fail("服务拒绝访问")))));
+                        Mono.just(response.bufferFactory().wrap(JSON.toJSONBytes(RespBody.fail("服务拒绝访问")))));
             }
 
             return chain.filter(exchange);
