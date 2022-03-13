@@ -14,7 +14,6 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 /**
  * @description:
  * @author: youcong
- * @time: 2022/3/13 21:24
  */
 public class YcCodeGenerator {
     public static void main(String[] args) {
