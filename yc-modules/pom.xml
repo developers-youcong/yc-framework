@@ -20,6 +20,7 @@
         <module>yc-plugins</module>
         <module>yc-monitor-server</module>
         <module>yc-wechat</module>
+        <module>yc-code-generator</module>
     </modules>
 
 
