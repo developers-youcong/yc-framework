@@ -439,6 +439,11 @@
                 <version>${version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-drools</artifactId>
+                <version>${version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.google.guava</groupId>
