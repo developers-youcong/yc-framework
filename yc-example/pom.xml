@@ -15,6 +15,7 @@
     <modules>
         <module>yc-example-page</module>
         <module>yc-example-easypoi</module>
+        <module>yc-example-drools</module>
     </modules>
 
 
