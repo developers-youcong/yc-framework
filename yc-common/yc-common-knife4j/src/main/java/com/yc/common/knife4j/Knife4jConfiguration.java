@@ -107,6 +107,7 @@ public class Knife4jConfiguration {
                 basePackage = ApplicationConst.KNIFE4J_WECHAT_PACKAGE;
                 break;
             default:
+                basePackage = ApplicationConst.DEFAULT_PACKAGE;
                 break;
         }
         Console.log("basePackage:" + basePackage);
@@ -145,6 +146,7 @@ public class Knife4jConfiguration {
                 title = "微信生态管理";
                 break;
             default:
+                title = "默认应用管理";
                 break;
         }
         Console.log("title:" + title);
@@ -183,6 +185,7 @@ public class Knife4jConfiguration {
                 desc = "Wechat API";
                 break;
             default:
+                desc = "Default API";
                 break;
         }
         Console.log("desc:" + desc);

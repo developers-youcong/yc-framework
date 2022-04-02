@@ -4,8 +4,6 @@ package com.yc.common.core.base.enums;
 /**
  * @Author: youcong
  * @Description: 返回码
- * @Date: 2020/8/20 18:53
- * @Version: 1.0.0
  */
 public enum ResultCode {
 

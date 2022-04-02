@@ -11,7 +11,6 @@ import org.springframework.data.elasticsearch.config.AbstractElasticsearchConfig
 /**
  * @description:
  * @author: youcong
- * @time: 2021/12/3 20:03
  */
 @Configuration
 public class ElasticsearchRestTemplateConfig extends AbstractElasticsearchConfiguration {

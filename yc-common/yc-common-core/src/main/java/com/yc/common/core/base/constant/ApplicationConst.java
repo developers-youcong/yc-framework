@@ -9,6 +9,8 @@ public class ApplicationConst {
 
     public static final String FEIGN_PACKAGE_SCANNER = "com.yc";
 
+    public static final String DEFAULT_PACKAGE = "com.yc";
+
     public static final String DEFAULT_FLAG = "-";
     public static final String NULL_STR = "";
 

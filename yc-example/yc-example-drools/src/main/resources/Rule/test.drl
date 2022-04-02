@@ -1,0 +1,24 @@
+
+import com.yc.example.drools.dto.CouponReqDTO
+import com.yc.example.drools.vo.CouponVO
+import java.math.BigDecimal
+dialect  "java"
+
+rule "coupon-1"
+    when
+      $dataObj:CouponReqDTO(couponType == 1)
+      $result:CouponVO()
+    then
+      $result.setResult(new BigDecimal(10));
+      insert($result);
+end
+
+
+rule "coupon-2"
+    when
+      $dataObj:CouponReqDTO(couponType == 2)
+      $result:CouponVO()
+    then
+      $result.setResult(new BigDecimal(20));
+      insert($result);
+end

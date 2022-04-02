@@ -14,12 +14,13 @@ server:
     max-http-header-size: 1048576
     #启动APR(非阻塞IO)
     protocol: org.apache.coyote.http11.Http11AprProtocol
-  port: 7001
+  port: 7008
+
 # Spring
 spring:
   application:
     # 应用名称
-    name: yc-example-easypoi
+    name: yc-example-security
   profiles:
     # 环境配置
     active: dev
@@ -28,7 +29,6 @@ spring:
       discovery:
         # 服务注册地址
         server-addr: 127.0.0.1:8848
-        namespace: example
       config:
         # 配置中心地址
         server-addr: 127.0.0.1:8848
@@ -36,4 +36,3 @@ spring:
         file-extension: yml
         # 共享配置
         shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
-        namespace: example
