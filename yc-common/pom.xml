@@ -51,6 +51,9 @@
         <module>yc-common-shedlock</module>
         <module>yc-common-drools</module>
         <module>yc-common-easypoi</module>
+        <module>yc-common-tlpoi</module>
+        <module>yc-common-liteflow</module>
+        <module>yc-common-smart-socket</module>
     </modules>
 
 

@@ -1,0 +1,4 @@
+server:
+  port: 7013
+liteflow:
+  rule-source: "config/*.xml"

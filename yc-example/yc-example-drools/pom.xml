@@ -14,11 +14,6 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-nacos</artifactId>
-        </dependency>
-
 
         <dependency>
             <groupId>com.yc.framework</groupId>
@@ -31,14 +26,10 @@
         </dependency>
 
         <dependency>
-            <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-core</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-knife4j</artifactId>
-        </dependency>
     </dependencies>
 
 </project>

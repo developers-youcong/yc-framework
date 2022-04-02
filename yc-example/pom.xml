@@ -16,6 +16,45 @@
         <module>yc-example-page</module>
         <module>yc-example-easypoi</module>
         <module>yc-example-drools</module>
+        <module>yc-example-poi</module>
+        <module>yc-example-poitl</module>
+        <module>yc-example-cors</module>
+        <module>yc-example-knife4j</module>
+        <module>yc-example-log</module>
+        <module>yc-example-redis</module>
+        <module>yc-example-security</module>
+        <module>yc-example-email</module>
+        <module>yc-example-crawler</module>
+        <module>yc-example-thread</module>
+        <module>yc-example-multidatabase</module>
+        <module>yc-example-wordtopdf</module>
+        <module>yc-example-quartz</module>
+        <module>yc-example-xxljob</module>
+        <module>yc-example-elasticjob</module>
+        <module>yc-example-linktrack</module>
+        <module>yc-example-druid</module>
+        <module>yc-example-sentinel</module>
+        <module>yc-example-eureka</module>
+        <module>yc-example-nacos</module>
+        <module>yc-example-mp</module>
+        <module>yc-example-es</module>
+        <module>yc-example-mongo</module>
+        <module>yc-example-txlcn</module>
+        <module>yc-example-shardingjdbc</module>
+        <module>yc-example-cxf</module>
+        <module>yc-example-dubbo</module>
+        <module>yc-example-grpc</module>
+        <module>yc-example-shedlock</module>
+        <module>yc-example-test</module>
+        <module>yc-example-seata</module>
+        <module>yc-example-cs</module>
+        <module>yc-example-activemq</module>
+        <module>yc-example-kafka</module>
+        <module>yc-example-rabbitmq</module>
+        <module>yc-example-rocketmq</module>
+        <module>yc-example-netty</module>
+        <module>yc-example-liteflow</module>
+        <module>yc-example-smart-socket</module>
     </modules>
 
 

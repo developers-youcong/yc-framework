@@ -45,12 +45,10 @@
         <jsoup.version>1.11.3</jsoup.version>
         <webmagic.version>0.7.4</webmagic.version>
         <sa-token.version>1.26.0</sa-token.version>
-        <shedlock.version>4.28.0</shedlock.version>
         <jackson-annotations.version>2.11.3</jackson-annotations.version>
         <jbcrypt.version>0.4</jbcrypt.version>
         <guava.version>21.0</guava.version>
         <commons-net.version>3.6</commons-net.version>
-        <tl-poi.version>1.11.0</tl-poi.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -161,12 +159,6 @@
             </dependency>
 
             <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper</artifactId>
-                <version>${pagehelpe.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>com.github.xr2117</groupId>
                 <artifactId>bean-mapping</artifactId>
                 <version>${bean-mapping.version}</version>
@@ -192,12 +184,6 @@
             </dependency>
 
             <dependency>
-                <groupId>com.deepoove</groupId>
-                <artifactId>poi-tl</artifactId>
-                <version>${tl-poi.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
@@ -218,9 +204,28 @@
 
             <dependency>
                 <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-liteflow</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-smart-socket</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
                 <artifactId>yc-common-security</artifactId>
                 <version>${version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-tlpoi</artifactId>
+                <version>${version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>com.yc.framework</groupId>
@@ -305,6 +310,12 @@
             <dependency>
                 <groupId>com.yc.framework</groupId>
                 <artifactId>yc-common-wx</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-cxf</artifactId>
                 <version>${version}</version>
             </dependency>
 
@@ -495,11 +506,6 @@
                 <version>${sa-token.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>net.javacrumbs.shedlock</groupId>
-                <artifactId>shedlock-provider-redis-spring</artifactId>
-                <version>${shedlock.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
