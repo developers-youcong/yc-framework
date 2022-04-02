@@ -9,13 +9,11 @@ import cn.hutool.json.JSONObject;
 import com.yc.api.CnBlogsApi;
 import com.yc.common.core.base.dto.crawler.PostCrawlerReqDTO;
 import com.yc.common.core.base.dto.crawler.UserCrawlerReqDTO;
-import com.yc.common.core.base.enums.ResultCode;
+import com.yc.common.core.base.enums.RespCode;
 import com.yc.common.core.base.result.RespBody;
 import com.yc.common.core.base.utils.JbcryptUtil;
 import com.yc.common.core.base.utils.thread.ThreadPoolUtil;
-import com.yc.crawler.mapper.CrawlerMapper;
 import com.yc.crawler.mapper.PostCrawlerMapper;
-import com.yc.crawler.process.ZqDataCrawler;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -45,32 +44,7 @@ public class CrawlerController {
     private CnBlogsApi cnBlogsApi;
 
     @Autowired
-    private CrawlerMapper crawlerMapper;
-
-    @Autowired
     private PostCrawlerMapper postCrawlerMapper;
-
-    /**
-     * 真气网-城市小时级数据抓取
-     */
-    @PostMapping("/zq_city_hour")
-    @ApiOperation("真气网-城市小时级数据抓取")
-    public RespBody zq_city_hour() {
-
-        ExecutorService executorService = ThreadPoolUtil.getThreadPool();
-
-        executorService.execute(() -> {
-            List<String> dataList = crawlerMapper.selectAllCity();
-            System.out.println("size:" + dataList.size());
-            if (!dataList.isEmpty()) {
-                for (String city : dataList) {
-                    ZqDataCrawler.zqDataCaptureMethod(city);
-                }
-            }
-        });
-
-        return RespBody.success();
-    }
 
 
     /**
@@ -88,7 +62,7 @@ public class CrawlerController {
                 List<String> dataList = postCrawlerMapper.selectAllUserName(8L);
                 for (String str : dataList) {
                     RespBody resultBody01 = cnBlogsApi.getPersonalBlogInfo(str);
-                    if (ResultCode.SELECT_SUCCESS.getCode().equals(resultBody01.getCode())) {
+                    if (RespCode.SELECT_SUCCESS.getCode().equals(resultBody01.getCode())) {
                         JSONObject jsonObject = new JSONObject(resultBody01.getData());
                         int totalCount = Integer.parseInt(jsonObject.get("postCount").toString());
                         int pageSize = 10;

@@ -12,5 +12,10 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-example-thread</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

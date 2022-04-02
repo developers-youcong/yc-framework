@@ -1,8 +1,8 @@
 package com.yc.common.core.base.result;
 
 
-import com.yc.common.core.base.enums.IErrorCode;
-import com.yc.common.core.base.enums.ResultCode;
+import com.yc.common.core.base.enums.ErrorCode;
+import com.yc.common.core.base.enums.RespCode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +20,7 @@ public class RespBody<T> implements Serializable {
 
     public RespBody(String code) {
         this.code = code;
-        this.msg = ResultCode.SELECT_SUCCESS.getCode();
+        this.msg = RespCode.SELECT_SUCCESS.getCode();
     }
 
     public RespBody(String code, String msg) {
@@ -29,13 +29,13 @@ public class RespBody<T> implements Serializable {
     }
 
     public RespBody(T data) {
-        this.code = ResultCode.SELECT_SUCCESS.getCode();
+        this.code = RespCode.SELECT_SUCCESS.getCode();
         this.data = data;
-        this.msg = ResultCode.SELECT_SUCCESS.getMsg();
+        this.msg = RespCode.SELECT_SUCCESS.getMsg();
     }
 
     public static RespBody success() {
-        return new RespBody(ResultCode.SELECT_SUCCESS.getCode());
+        return new RespBody(RespCode.SELECT_SUCCESS.getCode());
     }
 
     public static RespBody success(Object data) {
@@ -43,18 +43,18 @@ public class RespBody<T> implements Serializable {
     }
 
     public static RespBody fail() {
-        return new RespBody(ResultCode.FAIL_ERROR);
+        return new RespBody(RespCode.FAIL_ERROR);
     }
 
     public static RespBody fail(String msg) {
-        return RespBody.fail(ResultCode.FAIL_ERROR.getCode(), msg);
+        return RespBody.fail(RespCode.FAIL_ERROR.getCode(), msg);
     }
 
     public static RespBody fail(String code, String msg) {
         return new RespBody(code, msg);
     }
 
-    public static <T> RespBody<T> failed(IErrorCode errorCode) {
+    public static <T> RespBody<T> failed(ErrorCode errorCode) {
         return new RespBody<T>(errorCode.getCode(), errorCode.getMsg(), null);
     }
 

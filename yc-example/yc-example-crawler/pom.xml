@@ -12,5 +12,14 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-example-crawler</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-crawler</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

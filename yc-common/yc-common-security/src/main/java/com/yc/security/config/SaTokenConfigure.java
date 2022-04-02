@@ -7,7 +7,7 @@ import cn.dev33.satoken.stp.StpUtil;
 import com.yc.api.UserApi;
 import com.yc.common.core.base.constant.ApplicationConst;
 import com.yc.common.core.base.dto.auth.UserIdReqDTO;
-import com.yc.common.core.base.enums.ResultCode;
+import com.yc.common.core.base.enums.RespCode;
 import com.yc.common.core.base.result.RespBody;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,7 +58,7 @@ public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
         UserIdReqDTO permReq = new UserIdReqDTO();
         permReq.setUserId(handleUserId(loginId.toString()));
         RespBody<List<String>> resultBody = userApi.getPerm(permReq);
-        if (ResultCode.SELECT_SUCCESS.getCode().equals(resultBody.getCode())) {
+        if (RespCode.SELECT_SUCCESS.getCode().equals(resultBody.getCode())) {
             permList = resultBody.getData();
         }
         return permList;
@@ -71,7 +71,7 @@ public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
         UserIdReqDTO permReq = new UserIdReqDTO();
         permReq.setUserId(handleUserId(loginId.toString()));
         RespBody<List<String>> resultBody = userApi.getRole(permReq);
-        if (ResultCode.SELECT_SUCCESS.getCode().equals(resultBody.getCode())) {
+        if (RespCode.SELECT_SUCCESS.getCode().equals(resultBody.getCode())) {
             roleList = resultBody.getData();
         }
         return roleList;
