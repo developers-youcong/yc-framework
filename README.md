@@ -38,7 +38,7 @@
 - 分库分表中间件：ShardingJdbc、MyCat；
 - 爬虫框架：JSOUP/WebMagic；
 - 日志框架：Lombok；
-- Excel处理:Apache Poi；
+- Excel处理:Apache Poi、EasyPoi；
 - 分布式定时任务：Quartz、Xxl-Job、Elastic-Job、ShedLock；
 - 服务链路追踪：SpringCloud Sleuth+Zipkin；
 - Word模板引擎：Poi-tl；
@@ -54,7 +54,9 @@
 - 分布式处理引擎:Apache Flink；
 - 文件存储:私有云或公有云均支持；
 - 单元测试框架:Junit；
-- 分布式事务:Seata、Tx-LCN。
+- 分布式事务:Seata、Tx-LCN；
+- 规则引擎:Drools、LiteFlow；
+- 通信框架:Netty、Smart Socket。
 
 ## 六、系统模块
 ````   
@@ -102,8 +104,6 @@
 │       └── yc-common-smart-socket             //  smart-socket模块
 │       └── yc-common-elasticjob                 //  elasticjob模块
 │       └── yc-common-drools                 //  drools模块
-
-
 
 
 │                         
@@ -255,8 +255,11 @@
 文档地址:
 http://framework.youcongtech.com/
 
-官方博客:
+开源作者博客:
 https://youcongtech.com/
+
+开源作者博客关于YC-Framework相关:
+https://youcongtech.com/tags/YC-Framework/
 
 官方微信公众号:
 
