@@ -3,7 +3,7 @@ package com.yc.security.controller;
 import cn.dev33.satoken.exception.NotLoginException;
 import cn.dev33.satoken.exception.NotPermissionException;
 import cn.dev33.satoken.exception.NotRoleException;
-import com.yc.common.core.base.enums.ResultCode;
+import com.yc.common.core.base.enums.RespCode;
 import com.yc.common.core.base.result.RespBody;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;
@@ -46,7 +46,7 @@ public class OverallExceptionHandler {
         } else {
             message = "当前会话未登录";
         }
-        return RespBody.fail(ResultCode.TOKEN_ERROR.getCode(), message);
+        return RespBody.fail(RespCode.TOKEN_ERROR.getCode(), message);
     }
 
     /**
@@ -58,7 +58,7 @@ public class OverallExceptionHandler {
     @ExceptionHandler(value = NotPermissionException.class)
     public RespBody handNotPermissionExceptionHandler(NotPermissionException e) {
         e.printStackTrace();
-        return RespBody.fail(ResultCode.PERM_ERROR.getCode(), e.getMessage());
+        return RespBody.fail(RespCode.PERM_ERROR.getCode(), e.getMessage());
     }
 
     /**
@@ -70,7 +70,7 @@ public class OverallExceptionHandler {
     @ExceptionHandler(value = NotRoleException.class)
     public RespBody handNotNotRoleExceptionHandler(NotRoleException e) {
         e.printStackTrace();
-        return RespBody.fail(ResultCode.ROLE_ERROR.getCode(), e.getMessage());
+        return RespBody.fail(RespCode.ROLE_ERROR.getCode(), e.getMessage());
     }
 
 }

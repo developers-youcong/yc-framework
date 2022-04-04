@@ -12,5 +12,21 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-example-dubbo</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-dubbo</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

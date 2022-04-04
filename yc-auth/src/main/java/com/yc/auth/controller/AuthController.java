@@ -9,7 +9,7 @@ import com.yc.common.core.base.constant.AuthConst;
 import com.yc.common.core.base.dto.auth.LogoutReqDTO;
 import com.yc.common.core.base.dto.auth.UserAuthInfoReqDTO;
 import com.yc.common.core.base.dto.auth.UserIdReqDTO;
-import com.yc.common.core.base.enums.ResultCode;
+import com.yc.common.core.base.enums.RespCode;
 import com.yc.common.core.base.result.RespBody;
 import com.yc.common.log.annotation.Log;
 import io.swagger.annotations.Api;
@@ -47,15 +47,15 @@ public class AuthController {
     @Log("登录")
     public RespBody login(@RequestBody UserAuthInfoReqDTO reqDTO) {
         if (StrUtil.isEmpty(reqDTO.getAccount()) || StrUtil.isEmpty(reqDTO.getPassword()) || reqDTO.getType() == null) {
-            return RespBody.fail(ResultCode.ILLEGAL_PARAMETER_ERROR.getCode(), ResultCode.ILLEGAL_PARAMETER_ERROR.getMsg());
+            return RespBody.fail(RespCode.ILLEGAL_PARAMETER_ERROR.getCode(), RespCode.ILLEGAL_PARAMETER_ERROR.getMsg());
         }
         Map<String, Object> resultMap = userAuthService.loginHandle(reqDTO);
         String flag = resultMap.get(AuthConst.FLAG).toString();
         if (AuthConst.FLAG_ZERO_VAL.equals(flag)) {
-            return RespBody.fail(ResultCode.USER_NO_EXIST_ERROR.getCode(), ResultCode.USER_NO_EXIST_ERROR.getMsg());
+            return RespBody.fail(RespCode.USER_NO_EXIST_ERROR.getCode(), RespCode.USER_NO_EXIST_ERROR.getMsg());
         }
         if (AuthConst.FLAG_ONE_VAL.equals(flag)) {
-            return RespBody.fail(ResultCode.USER_OR_PASSWD_ERROR.getCode(), ResultCode.USER_OR_PASSWD_ERROR.getMsg());
+            return RespBody.fail(RespCode.USER_OR_PASSWD_ERROR.getCode(), RespCode.USER_OR_PASSWD_ERROR.getMsg());
         }
         if (AuthConst.FLAG_TWO_VAL.equals(flag)) {
             String ID = reqDTO.getType() + ApplicationConst.DEFAULT_FLAG + resultMap.get(AuthConst.ID).toString();

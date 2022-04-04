@@ -5,7 +5,7 @@ package com.yc.common.core.base.enums;
  * @Author: youcong
  * @Description: 返回码
  */
-public enum ResultCode {
+public enum RespCode {
 
     SELECT_SUCCESS("200", "成功"),
     FAIL_ERROR("500", "服务器异常"),
@@ -18,7 +18,7 @@ public enum ResultCode {
     private String code;
     private String msg;
 
-    ResultCode(String code, String msg) {
+    RespCode(String code, String msg) {
         this.code = code;
         this.msg = msg;
     }
