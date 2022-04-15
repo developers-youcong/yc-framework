@@ -11,6 +11,11 @@
 
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-example-dubbo</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>yc-example-dubbo-provider</module>
+        <module>yc-example-dubbo-consumer</module>
+    </modules>
 
     <dependencies>
         <dependency>
