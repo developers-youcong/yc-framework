@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lowerCaseServiceId: true
+          enabled: true
+      routes:
+        # 认证中心
+        - id: client1
+          uri: lb://client1
+          predicates:
+            - Path=/client1/**
+          filters:
+            - StripPrefix=1
+
+application:
+  name: gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8079/eureka/
+
+#请求处理的超时时间
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000

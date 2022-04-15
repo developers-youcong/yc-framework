@@ -1,0 +1,11 @@
+server:
+  port: 8090
+spring:
+  application:
+    # 服务名，后续可通过服务名访问这个服务，而不需要写具体的ip、端口
+    name: client1
+eureka:
+  client:
+    # eureka server的注册地址
+    serviceUrl:
+      defaultZone: http://localhost:8079/eureka/
