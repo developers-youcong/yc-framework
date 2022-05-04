@@ -15,7 +15,6 @@
     <modules>
         <module>yc-example-page</module>
         <module>yc-example-easypoi</module>
-        <module>yc-example-drools</module>
         <module>yc-example-poi</module>
         <module>yc-example-poitl</module>
         <module>yc-example-cors</module>
