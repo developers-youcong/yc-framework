@@ -49,7 +49,6 @@
         <module>yc-common-grpc</module>
         <module>yc-common-shardingjdbc</module>
         <module>yc-common-shedlock</module>
-        <module>yc-common-drools</module>
         <module>yc-common-easypoi</module>
         <module>yc-common-tlpoi</module>
         <module>yc-common-liteflow</module>
