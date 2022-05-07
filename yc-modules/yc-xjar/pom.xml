@@ -16,13 +16,34 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.github.core-lib</groupId>
             <artifactId>xjar</artifactId>
             <version>${xjar.version}</version>
-            <!-- <scope>test</scope> -->
+            <!--<scope>test</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-monitor</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-knife4j</artifactId>
         </dependency>
     </dependencies>
+
     <!-- 设置 jitpack.io 仓库 -->
     <repositories>
         <repository>

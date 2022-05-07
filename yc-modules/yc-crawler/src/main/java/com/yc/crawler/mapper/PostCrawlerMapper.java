@@ -10,7 +10,6 @@ import java.util.List;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/10/18 20:24
  */
 @Repository
 public interface PostCrawlerMapper {
