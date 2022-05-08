@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/20 20:47
  */
 @Service
 public class FileServiceImpl extends ServiceImpl<FileMapper, FileEntity> implements FileService {

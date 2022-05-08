@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 /**
  * @description: 文件
  * @author: youcong
- * @time: 2021/9/20 20:42
  */
 @Repository
 public interface FileMapper extends BaseMapper<FileEntity> {
