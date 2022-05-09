@@ -8,7 +8,6 @@ import org.springframework.cloud.client.SpringCloudApplication;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/8/24 22:18
  */
 @SpringCloudApplication
 @MapperScan(ApplicationConst.MAPPER_FILE)

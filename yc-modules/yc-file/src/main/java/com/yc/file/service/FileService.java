@@ -9,7 +9,6 @@ import com.yc.common.core.base.entity.file.FileEntity;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/20 20:45
  */
 public interface FileService extends IService<FileEntity> {
 

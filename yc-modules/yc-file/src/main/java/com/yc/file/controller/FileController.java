@@ -21,7 +21,6 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/20 20:48
  */
 @RestController
 @Slf4j
