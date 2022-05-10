@@ -2,6 +2,7 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.yc.security.config.SaTokenConfigure,\
   com.yc.security.controller.OverallExceptionHandler,\
   com.yc.security.listener.MySaTokenListener,\
+  com.yc.security.config.FeignClientConfig,\
   com.yc.security.config.MySaTokenAction
 
   

@@ -261,6 +261,10 @@ https://youcongtech.com/
 开源作者博客关于YC-Framework相关:
 https://youcongtech.com/tags/YC-Framework/
 
-官方微信公众号:
+欢迎关注官方微信公众号:
 
 ![微信公众号](http://framework.youcongtech.com/_media/wechat.jpg)
+
+YC-Framework技术交流群，请添加如下(添加请备注技术交流):
+
+![微信公众号](./doc/other/contact.png)
