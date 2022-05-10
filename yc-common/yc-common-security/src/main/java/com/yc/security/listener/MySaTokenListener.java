@@ -17,65 +17,44 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class MySaTokenListener implements SaTokenListener {
 
-    /**
-     * 每次登录时触发
-     */
     @Override
-    public void doLogin(String s, Object o, SaLoginModel saLoginModel) {
-        log.info("每次登录时触发");
+    public void doLogin(String s, Object o, String s1, SaLoginModel saLoginModel) {
+        log.info("登录触发");
     }
 
-    /**
-     * 每次注销时触发
-     */
     @Override
     public void doLogout(String s, Object o, String s1) {
-        log.info("每次注销时触发");
+        log.info("注销触发");
     }
 
     @Override
-    public void doLogoutByLoginId(String s, Object o, String s1, String s2) {
-
+    public void doKickout(String s, Object o, String s1) {
+        log.info("每次被踢下线时触发");
     }
 
-    /**
-     * 每次注销时触发
-     */
     @Override
-    public void doReplaced(String loginType, Object loginId, String s1, String s2) {
-        log.info("每次注销时触发");
+    public void doReplaced(String s, Object o, String s1) {
+        log.info("每次被顶下线时触发");
     }
 
-    /**
-     * 每次被封禁时触发
-     */
     @Override
-    public void doDisable(String loginType, Object loginId, long disableTime) {
+    public void doDisable(String s, Object o, long l) {
         log.info("每次被封禁时触发");
     }
 
-    /**
-     * 每次被解封时触发
-     */
     @Override
-    public void doUntieDisable(String loginType, Object loginId) {
+    public void doUntieDisable(String s, Object o) {
         log.info("每次被解封时触发");
     }
 
-    /**
-     * 每次创建Session时触发
-     */
     @Override
-    public void doCreateSession(String id) {
-        log.info("每次创建Session时触发:" + id);
+    public void doCreateSession(String s) {
+        log.info("每次创建Session时触发");
     }
 
-    /**
-     * 每次注销Session时触发
-     */
     @Override
-    public void doLogoutSession(String id) {
-        log.info("每次注销Session时触发:" + id);
+    public void doLogoutSession(String s) {
+        log.info("每次注销Session时触发");
     }
 }
 

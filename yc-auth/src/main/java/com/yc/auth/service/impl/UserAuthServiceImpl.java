@@ -20,7 +20,6 @@ import java.util.Map;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/20 22:25
  */
 @Service
 public class UserAuthServiceImpl implements UserAuthService {
