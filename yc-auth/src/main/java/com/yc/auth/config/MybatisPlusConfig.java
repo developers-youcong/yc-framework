@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @description: 分页拦截器
  * @author: youcong
- * @time: 2021/9/19 20:53
  */
 @Configuration
 public class MybatisPlusConfig {

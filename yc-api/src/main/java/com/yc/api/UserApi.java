@@ -12,7 +12,6 @@ import java.util.List;
 /**
  * @description:
  * @author: youcong
- * @time: 2022/1/3 21:21
  */
 @FeignClient(contextId = "userApi", name = ApplicationConst.AUTH)
 public interface UserApi {

@@ -10,7 +10,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/8/23 21:58
  */
 @EnableDiscoveryClient
 @EnableCircuitBreaker
