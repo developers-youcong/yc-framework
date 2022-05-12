@@ -1,4 +1,4 @@
-package com.yc.cms.config;
+package com.yc.mp.config;
 
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.extension.injector.LogicSqlInjector;
@@ -7,12 +7,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @description: 分页拦截器
+ * @description:
  * @author: youcong
- * @time: 2021/9/19 20:53
  */
 @Configuration
-public class MybatisPlusConfig {
+public class MyBatisPlusConfig {
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
@@ -24,4 +23,3 @@ public class MybatisPlusConfig {
         return new LogicSqlInjector();
     }
 }
-

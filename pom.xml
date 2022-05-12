@@ -33,7 +33,7 @@
         <poi.version>3.17</poi.version>
         <common-pool.version>2.6.2</common-pool.version>
         <testng.version>6.10</testng.version>
-        <knife4j-spring-boot-starter.version>2.0.7</knife4j-spring-boot-starter.version>
+        <knife4j-spring-boot-starter.version>2.0.9</knife4j-spring-boot-starter.version>
         <druid-spring-boot-starter.version>1.1.13</druid-spring-boot-starter.version>
         <bean-mapping.version>2.1.1</bean-mapping.version>
         <mybatis-plus.version>3.1.0</mybatis-plus.version>
