@@ -11,7 +11,6 @@ import com.yc.common.core.base.entity.admin.CompanyEntity;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/19 20:51
  */
 public interface CompanyService extends IService<CompanyEntity> {
 

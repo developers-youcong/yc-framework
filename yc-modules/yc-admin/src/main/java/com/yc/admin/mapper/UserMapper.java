@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 /**
  * @description: 用户
  * @author: youcong
- * @time: 2021/9/20 21:00
  */
 @Repository
 public interface UserMapper extends BaseMapper<UserEntity> {

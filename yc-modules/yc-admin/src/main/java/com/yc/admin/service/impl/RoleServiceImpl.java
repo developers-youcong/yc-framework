@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/20 21:07
  */
 @Service
 public class RoleServiceImpl extends ServiceImpl<RoleMapper, RoleEntity> implements RoleService {

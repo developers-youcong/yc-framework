@@ -22,7 +22,6 @@ import org.springframework.stereotype.Service;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/20 21:02
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> implements UserService {

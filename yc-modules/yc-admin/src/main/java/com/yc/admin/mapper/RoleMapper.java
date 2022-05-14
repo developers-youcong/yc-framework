@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 /**
  * @description: 角色
  * @author: youcong
- * @time: 2021/9/20 21:05
  */
 @Repository
 public interface RoleMapper extends BaseMapper<RoleEntity> {

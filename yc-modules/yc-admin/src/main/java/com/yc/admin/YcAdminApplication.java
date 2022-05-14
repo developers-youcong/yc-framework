@@ -9,7 +9,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/8/24 22:00
  */
 @SpringCloudApplication
 @EnableFeignClients(basePackages = ApplicationConst.FEIGN_PACKAGE_SCANNER)
