@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/20 20:25
  */
 @Service
 public class CompanyMenuServiceImpl extends ServiceImpl<CompanyMenuMapper, CompanyMenuEntity> implements CompanyMenuService {

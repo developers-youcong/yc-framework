@@ -10,7 +10,6 @@ import com.yc.common.core.base.entity.admin.RoleEntity;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/20 21:06
  */
 public interface RoleService extends IService<RoleEntity> {
     /**

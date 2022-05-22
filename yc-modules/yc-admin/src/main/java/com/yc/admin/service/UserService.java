@@ -12,7 +12,6 @@ import com.yc.common.core.base.vo.admin.UserOneVO;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/20 21:01
  */
 public interface UserService extends IService<UserEntity> {
 

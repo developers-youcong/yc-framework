@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/9/19 20:52
  */
 @Service
 public class CompanyServiceImpl extends ServiceImpl<CompanyMapper, CompanyEntity> implements CompanyService {

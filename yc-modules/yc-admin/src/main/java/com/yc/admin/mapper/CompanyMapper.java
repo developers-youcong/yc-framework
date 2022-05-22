@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 /**
  * @description: 公司
  * @author: youcong
- * @time: 2021/9/19 20:47
  */
 @Repository
 public interface CompanyMapper extends BaseMapper<CompanyEntity> {
