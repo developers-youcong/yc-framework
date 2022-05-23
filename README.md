@@ -103,7 +103,6 @@
 │       └── yc-common-easypoi                 //  easypoi模块
 │       └── yc-common-smart-socket             //  smart-socket模块
 │       └── yc-common-elasticjob                 //  elasticjob模块
-│       └── yc-common-drools                 //  drools模块
 
 
 │                         
@@ -117,9 +116,11 @@
 │       └── yc-wechat                             // 微信生态微服务 [9006]
 │       └── yc-monitor-server                     // 监控微服务 [9100]
 │       └── yc-code-generator                     // 代码生成器工具
-│       └── yc-xjar                               // jar包加密工具
+│       └── yc-xjar                               // jar包加密微服务[9007]
 
-├──pom.xml                
+├──pom.xml  
+       
+├── yc-ui         // YC-Framework后台管理系统      
 ````
 
 ## 七、功能
@@ -180,15 +181,17 @@
 - 例子覆盖60%(yc-example)。
 
 
-## 本次版本V1.0.6更新
-- 1.系统例子覆盖60%(各大分布式体系中的主流技术栈均有体现)；
-- 2.清理部分代码；
-- 3.支持Drools、EasyPoi、LiteFlow、Smart-Socket等；
-- 4.官方文档更新V1.0.6；
-- 5.增加jar包源代码加密功能；
-- 6.yc-common-core核心包调整；
-- 7.新增代码生成器(基于MyBatis-Plus3.x)；
-- 8.部分问题处理。
+## 本次版本V1.0.7更新
+- 1.增加自动化打包脚本 bash/shell；
+- 2.优化Feign通信；
+- 3.新增yc-ui(基于vue-element-admin改造)；
+- 4.Nacos升级1.4.3；
+- 5.项目打包构建问题修复；
+- 6.yc-xjar微服务化(支持多个jar同时自动化加密）；
+- 7.Sa-Token升级1.30.0；
+- 8.Knife4j升级2.0.9；
+- 9.yc-common-mp模块问题处理；
+- 10.官网增加安全证书。
 
 ## 八、环境
 
