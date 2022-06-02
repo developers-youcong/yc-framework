@@ -49,6 +49,7 @@
         <jbcrypt.version>0.4</jbcrypt.version>
         <guava.version>21.0</guava.version>
         <commons-net.version>3.6</commons-net.version>
+        <t-log.version>1.4.1</t-log.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -515,6 +516,11 @@
                 <version>${jbcrypt.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.yomahub</groupId>
+                <artifactId>tlog-all-spring-boot-starter</artifactId>
+                <version>${t-log.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

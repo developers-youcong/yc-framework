@@ -72,6 +72,7 @@ public class AuthController {
      */
     @PostMapping("/auth/isLogin")
     @ApiOperation("登录状态")
+    @Log("登录状态")
     @SaCheckLogin
     public RespBody isLogin() {
         return RespBody.success(StpUtil.isLogin());
@@ -84,6 +85,7 @@ public class AuthController {
      */
     @PostMapping("/auth/getTokenInfo")
     @ApiOperation("获取Token信息")
+    @Log("获取Token信息")
     @SaCheckLogin
     public RespBody getTokenInfo() {
         return RespBody.success(StpUtil.getTokenInfo());
@@ -97,6 +99,7 @@ public class AuthController {
      */
     @PostMapping("/auth/logout")
     @ApiOperation("退出")
+    @Log("退出")
     @SaCheckLogin
     public RespBody logout(@RequestBody LogoutReqDTO reqDTO) {
         StpUtil.logoutByLoginId(reqDTO.getUserId());

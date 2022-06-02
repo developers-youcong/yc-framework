@@ -48,7 +48,7 @@ public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
             SaRouter.match("/role/**", () -> StpUtil.checkPermission("admin"));
 
         })).addPathPatterns("/**").excludePathPatterns(
-                "/auth/**", "/doc.html", "/webjars/**", "/swagger-resources", "/actuator/**");
+                "/auth/**", "/operate_log/add","/doc.html", "/webjars/**", "/swagger-resources", "/actuator/**");
     }
 
     @Override

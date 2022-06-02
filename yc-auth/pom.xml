@@ -53,13 +53,15 @@
 
         <dependency>
             <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-security</artifactId>
+            <artifactId>yc-common-log</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.yc.framework</groupId>
             <artifactId>yc-common-knife4j</artifactId>
         </dependency>
+
+
     </dependencies>
 
     <build>
