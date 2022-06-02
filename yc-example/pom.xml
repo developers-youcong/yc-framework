@@ -37,7 +37,6 @@
         <module>yc-example-nacos</module>
         <module>yc-example-mp</module>
         <module>yc-example-es</module>
-        <module>yc-example-mongo</module>
         <module>yc-example-txlcn</module>
         <module>yc-example-shardingjdbc</module>
         <module>yc-example-cxf</module>

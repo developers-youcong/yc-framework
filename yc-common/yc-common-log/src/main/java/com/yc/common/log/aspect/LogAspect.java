@@ -1,13 +1,17 @@
 package com.yc.common.log.aspect;
 
+import cn.dev33.satoken.stp.StpUtil;
+import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.IdUtil;
 import com.alibaba.fastjson.JSON;
-import com.yc.common.core.base.dto.common.OperLog;
+import com.yc.api.OperateLogApi;
+import com.yc.common.core.base.dto.common.OperateLog;
 import com.yc.common.core.base.utils.StringUtil;
 import com.yc.common.core.base.utils.ip.IpUtil;
 import com.yc.common.core.base.utils.servlet.ServletUtil;
 import com.yc.common.log.annotation.Log;
 import com.yc.common.log.enums.BusinessStatus;
+import com.yomahub.tlog.context.TLogContext;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
@@ -16,6 +20,7 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
@@ -34,6 +39,8 @@ import java.util.Map;
 @Component
 @Slf4j
 public class LogAspect {
+    @Autowired
+    private OperateLogApi operateLogApi;
 
     // 配置织入点
     @Pointcut("@annotation(com.yc.common.log.annotation.Log)")
@@ -70,7 +77,12 @@ public class LogAspect {
                 return;
             }
             // *========日志=========*//
-            OperLog operLog = new OperLog();
+            log.info("currIp:" + TLogContext.getCurrIp());
+            log.info("preIp:" + TLogContext.getPreIp());
+            log.info("traceId:" + TLogContext.getTraceId());
+            log.info("spanId:" + TLogContext.getSpanId());
+
+            OperateLog operLog = new OperateLog();
             operLog.setOperId(IdUtil.simpleUUID());
             operLog.setStatus(BusinessStatus.SUCCESS.ordinal());
             // 请求的地址
@@ -80,8 +92,8 @@ public class LogAspect {
             operLog.setJsonResult(JSON.toJSONString(jsonResult));
             //请求接口URL
             operLog.setOperUrl(ServletUtil.getRequest().getRequestURI());
-            //用户
-            operLog.setOperName("默认用户");
+            //当前用户ID
+            operLog.setOperName(String.valueOf(StpUtil.getLoginId()));
             if (e != null) {
                 operLog.setStatus(BusinessStatus.FAIL.ordinal());
                 operLog.setErrorMsg(StringUtil.substring(e.getMessage(), 0, 2000));
@@ -96,7 +108,10 @@ public class LogAspect {
             getControllerMethodDescription(joinPoint, controllerLog, operLog);
             // 保存数据库或MongoDB
             log.info("operLog:" + operLog);
-
+            ThreadUtil.execAsync(() -> {
+                //调用日志存储API
+                operateLogApi.add(operLog);
+            });
         } catch (Exception exp) {
             // 记录本地异常日志
             log.error("==前置通知异常==");
@@ -112,7 +127,7 @@ public class LogAspect {
      * @param operLog 操作日志
      * @throws Exception
      */
-    public void getControllerMethodDescription(JoinPoint joinPoint, Log log, OperLog operLog) throws Exception {
+    public void getControllerMethodDescription(JoinPoint joinPoint, Log log, OperateLog operLog) throws Exception {
         // 是否需要保存request，参数和值
         if (log.isSaveReqData()) {
             operLog.setFunctionName(log.value());
@@ -127,7 +142,7 @@ public class LogAspect {
      * @param operLog 操作日志
      * @throws Exception 异常
      */
-    private void setRequestValue(JoinPoint joinPoint, OperLog operLog) throws Exception {
+    private void setRequestValue(JoinPoint joinPoint, OperateLog operLog) throws Exception {
         String requestMethod = operLog.getRequestMethod();
         if (HttpMethod.PUT.name().equals(requestMethod) || HttpMethod.POST.name().equals(requestMethod)) {
             String params = argsArrayToString(joinPoint.getArgs());

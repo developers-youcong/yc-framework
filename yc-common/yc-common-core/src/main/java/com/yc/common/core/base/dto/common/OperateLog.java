@@ -3,6 +3,8 @@ package com.yc.common.core.base.dto.common;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.yc.common.core.base.annotation.Excel;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
@@ -12,12 +14,14 @@ import java.util.Date;
  * @time: 2021/12/11 21:35
  */
 @Data
-public class OperLog {
+@Document("operate_log")
+public class OperateLog {
     private static final long serialVersionUID = 1L;
 
     /**
      * 日志主键
      */
+    @Id
     private String operId;
 
     /**

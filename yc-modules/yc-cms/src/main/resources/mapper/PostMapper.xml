@@ -7,6 +7,10 @@
         SELECT
         id,
         post_title,
+        post_excerpt,
+        comment_status,
+        post_status,
+        category_id,
         ( SELECT nick_name FROM yc_user WHERE id = post_author ) AS postAuthor,
         origin_url,
         ( SELECT company_name FROM yc_company WHERE id = company_id ) AS companyName,

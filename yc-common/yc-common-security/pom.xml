@@ -37,11 +37,6 @@
 
         <dependency>
             <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-log</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.yc.framework</groupId>
             <artifactId>yc-api</artifactId>
         </dependency>
 

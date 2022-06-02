@@ -16,6 +16,7 @@
             <artifactId>yc-common-nacos</artifactId>
         </dependency>
 
+
         <!-- SpringCloud Netflix Hystrix -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
