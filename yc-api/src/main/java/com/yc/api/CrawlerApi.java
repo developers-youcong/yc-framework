@@ -14,14 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 public interface CrawlerApi {
 
     /**
-     * 真气网-城市小时级数据抓取
-     *
-     * @return
-     */
-    @PostMapping("/dataCrawler/zq_city_hour")
-    RespBody zq_city_hour();
-
-    /**
      * 基于博客园用户相关的文章抓取
      *
      * @return

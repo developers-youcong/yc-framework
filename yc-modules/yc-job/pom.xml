@@ -57,7 +57,7 @@
 
         <dependency>
             <groupId>com.yc.framework</groupId>
-            <artifactId>yc-common-quartz</artifactId>
+            <artifactId>yc-common-xxljob</artifactId>
         </dependency>
 
 
