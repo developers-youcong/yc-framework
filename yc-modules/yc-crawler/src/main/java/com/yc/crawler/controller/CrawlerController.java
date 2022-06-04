@@ -6,6 +6,7 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.yc.api.CnBlogsApi;
 import com.yc.common.core.base.dto.crawler.PostCrawlerReqDTO;
 import com.yc.common.core.base.dto.crawler.UserCrawlerReqDTO;
@@ -22,6 +23,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -50,6 +52,8 @@ public class CrawlerController {
      * 基于博客园用户相关的文章抓取
      */
     @PostMapping("/cnblog_user")
+    @LcnTransaction
+    @Transactional
     @ApiOperation("基于博客园用户相关的文章抓取")
     public RespBody cnblog_user() {
         try {
@@ -89,6 +93,8 @@ public class CrawlerController {
      * 博客园首页文章抓取
      */
     @PostMapping("/cnblogs_home")
+    @LcnTransaction
+    @Transactional
     @ApiOperation("博客园首页文章抓取")
     public RespBody cnblogs_home() {
         ExecutorService executorService = ThreadPoolUtil.getThreadPool();
@@ -116,6 +122,8 @@ public class CrawlerController {
      * 博客园精品文章抓取
      */
     @PostMapping("/cnblog_es")
+    @LcnTransaction
+    @Transactional
     @ApiOperation("博客园精品文章抓取")
     public RespBody cnblog_es() {
         ExecutorService executorService = ThreadPoolUtil.getThreadPool();
