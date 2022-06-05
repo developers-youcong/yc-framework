@@ -191,7 +191,7 @@
 - 7.springcloud版本由Hoxton.SR10升级至Hoxton.SR12；
 - 8.文件微服务支持MinIO、Nginx、Openrestry等；
 - 9.数据爬虫微服务(针对博客数据采集进行分布式事务处理，基于TX-LCN)；
-- 10.博客数据采集定时任务(基于xxl-job实现)；
+- 10.博客数据采集定时任务(基于xxl-job实现)。
 
 ## 八、环境
 
