@@ -181,17 +181,17 @@
 - 例子覆盖60%(yc-example)。
 
 
-## 本次版本V1.0.7更新
-- 1.增加自动化打包脚本 bash/shell；
-- 2.优化Feign通信；
-- 3.新增yc-ui(基于vue-element-admin改造)；
-- 4.Nacos升级1.4.3；
-- 5.项目打包构建问题修复；
-- 6.yc-xjar微服务化(支持多个jar同时自动化加密）；
-- 7.Sa-Token升级1.30.0；
-- 8.Knife4j升级2.0.9；
-- 9.yc-common-mp模块问题处理；
-- 10.官网增加安全证书。
+## 本次版本V1.0.8更新
+- 1.优化yc-common核心模块(涉及yc-common-security、yc-common-log、yc-common-flink等)；
+- 2.T-Log打通日志追踪链路(轻量级分布式链路追踪)；
+- 3.yc-cms内容管理微服务文章搜索ES化(Elastic Search处理)；
+- 4.操作日志调整(使用MongoDB存储处理)；
+- 5.yc-plugins插件微服务(已支持图灵机器人，并实现自动化聊天)；
+- 6.SpringBoot版本升级2.3.12.RELEASE；
+- 7.springcloud版本由Hoxton.SR10升级至Hoxton.SR12；
+- 8.文件微服务支持MinIO、Nginx、Openrestry等；
+- 9.数据爬虫微服务(针对博客数据采集进行分布式事务处理，基于TX-LCN)；
+- 10.博客数据采集定时任务(基于xxl-job实现)；
 
 ## 八、环境
 
