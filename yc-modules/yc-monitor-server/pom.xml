@@ -12,6 +12,9 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-monitor-server</artifactId>
 
+    <properties>
+        <jackson-annotations.version>2.9.8</jackson-annotations.version>
+    </properties>
     <dependencies>
         <!-- SpringBoot Admin -->
         <dependency>
@@ -41,5 +44,22 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-annotations</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson-annotations.version}</version>
+        </dependency>
+
     </dependencies>
 </project>
