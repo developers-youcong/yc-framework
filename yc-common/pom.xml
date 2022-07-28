@@ -52,6 +52,11 @@
         <module>yc-common-tlpoi</module>
         <module>yc-common-liteflow</module>
         <module>yc-common-smart-socket</module>
+        <module>yc-common-image-combiner</module>
+        <module>yc-common-easyes</module>
+        <module>yc-common-dynamic-tp</module>
+        <module>yc-common-gobrs-async</module>
+        <module>yc-common-easypdf</module>
     </modules>
 
 
