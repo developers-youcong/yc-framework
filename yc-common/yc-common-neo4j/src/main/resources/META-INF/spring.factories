@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.yc.common.neo4j.Neo4jConfig
+
+  

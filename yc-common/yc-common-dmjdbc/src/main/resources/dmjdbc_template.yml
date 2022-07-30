@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: dm.jdbc.driver.DmDriver
+      url: jdbc:dm://localhost:5236/xxxx?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8
+      username: xxxx
+      password: xxxx
+    filters: stat,slf4j
