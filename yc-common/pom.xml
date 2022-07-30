@@ -57,6 +57,13 @@
         <module>yc-common-dynamic-tp</module>
         <module>yc-common-gobrs-async</module>
         <module>yc-common-easypdf</module>
+        <module>yc-common-influxdb</module>
+        <module>yc-common-clickhouse</module>
+        <module>yc-common-sqlserver</module>
+        <module>yc-common-postgresql</module>
+        <module>yc-common-neo4j</module>
+        <module>yc-common-couchbase</module>
+        <module>yc-common-dmjdbc</module>
     </modules>
 
 

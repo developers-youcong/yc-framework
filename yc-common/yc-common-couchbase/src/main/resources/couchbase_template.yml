@@ -1,0 +1,11 @@
+couchbase:
+  bootstrap-hosts: xxxx
+  username: xxxx
+  password: xxxx
+  bucket:
+    name: xxxx
+    password: xxxx
+  env:
+    timeouts:
+      connect: 30000
+      query: 2000

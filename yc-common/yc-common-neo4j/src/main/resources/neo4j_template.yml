@@ -1,0 +1,6 @@
+spring:
+  data:
+    neo4j:
+      uri: bolt://localhost:7687 #注意是bolt的端口
+      username: xxx
+      password: xxx

@@ -1,0 +1,7 @@
+spring:
+  influx:
+    url: http://127.0.0.1:8086
+    user: xxxx
+    password: xxxx
+    database: xxxx
+
