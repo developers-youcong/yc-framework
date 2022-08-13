@@ -178,20 +178,28 @@
 - Smart-Socket模块化；
 - 代码生成器；
 - Jar包加密；
+- 支持Dromara生态；
+- 支持国产分布式数据库；
+- 支持开源主流分布式数据库；
 - 例子覆盖60%(yc-example)。
 
 
-## 本次版本V1.0.8更新
-- 1.优化yc-common核心模块(涉及yc-common-security、yc-common-log、yc-common-flink等)；
-- 2.T-Log打通日志追踪链路(轻量级分布式链路追踪)；
-- 3.yc-cms内容管理微服务文章搜索ES化(Elastic Search处理)；
-- 4.操作日志调整(使用MongoDB存储处理)；
-- 5.yc-plugins插件微服务(已支持图灵机器人，并实现自动化聊天)；
-- 6.SpringBoot版本升级2.3.12.RELEASE；
-- 7.springcloud版本由Hoxton.SR10升级至Hoxton.SR12；
-- 8.文件微服务支持MinIO、Nginx、Openrestry等；
-- 9.数据爬虫微服务(针对博客数据采集进行分布式事务处理，基于TX-LCN)；
-- 10.博客数据采集定时任务(基于xxl-job实现)。
+## 本次版本V1.0.9更新
+- 1.接入空气质量数据(和风天气API)。
+- 2.新增image-combiner(Java服务端图片合成工具)。
+- 3.新增easyes(在elatic search基础上只做增强不做改变)。
+- 4.新增dynamic-tp(动态线程池监控)。
+- 5.新增Gobrs-Async(高性能异步编排)。
+- 6.新增easypdf(一个用搭积木的方式构建pdf)。
+- 7.修复若干bug。
+- 8.支持InfluxDB。
+- 9.支持Clickhouse。
+- 10.支持Ti-DB。
+- 11.支持SQL Server。
+- 12.支持postgreSQL。
+- 13.支持neo4j。
+- 14.支持couchbase。
+- 15.支持达梦数据库。
 
 ## 八、环境
 
