@@ -211,7 +211,7 @@
 - 13.支持neo4j。
 - 14.支持couchbase。
 - 15.支持达梦数据库。
-- (16)yc-framework官方文档全部开源。
+- 16.yc-framework官方文档全部开源。
 
 ## 八、环境
 
