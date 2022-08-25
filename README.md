@@ -114,8 +114,6 @@
 │       └── yc-common-clickhouse               //  clickhouse模块
 │       └── yc-common-couchbase               //  couchbase模块
 
-
-
 │                         
 ├── yc-modules           // 微服务模块
 │       └── yc-admin                              // 统一用户微服务 [9000]
