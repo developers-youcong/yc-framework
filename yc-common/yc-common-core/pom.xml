@@ -15,6 +15,7 @@
         <sshd-scp.version>2.1.0</sshd-scp.version>
         <ganymed-ssh2.version>build210</ganymed-ssh2.version>
         <javax.mail.version>1.6.2</javax.mail.version>
+        <bcprov-jdk15on.version>1.70</bcprov-jdk15on.version>
     </properties>
     <dependencies>
         <!-- Openfeign -->
@@ -135,6 +136,14 @@
             <version>${javax.mail.version}</version>
             <scope>compile</scope>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>${bcprov-jdk15on.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>
