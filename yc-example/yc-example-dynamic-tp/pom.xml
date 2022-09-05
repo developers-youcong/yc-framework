@@ -3,23 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>yc-common</artifactId>
+        <artifactId>yc-example</artifactId>
         <groupId>com.yc.framework</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yc.framework</groupId>
-    <artifactId>yc-common-dynamic-tp</artifactId>
-    <properties>
-        <dynamic-tp.version>1.0.8</dynamic-tp.version>
-    </properties>
+    <artifactId>yc-example-dynamic-tp</artifactId>
+
     <dependencies>
         <dependency>
-            <groupId>cn.dynamictp</groupId>
-            <artifactId>dynamic-tp-spring-boot-starter-nacos</artifactId>
-            <version>${dynamic-tp.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.yc.framework</groupId>
+            <artifactId>yc-common-dynamic-tp</artifactId>
         </dependency>
     </dependencies>
-
 </project>
