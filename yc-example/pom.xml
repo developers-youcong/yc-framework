@@ -53,6 +53,7 @@
         <module>yc-example-netty</module>
         <module>yc-example-liteflow</module>
         <module>yc-example-smart-socket</module>
+        <module>yc-example-dynamic-tp</module>
     </modules>
 
 

@@ -1,0 +1,23 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    #最小线程数
+    min-spare-threads: 500
+    #最大线程数
+    max-threads: 2500
+    #最大连接数
+    max-connections: 5000
+    #最大等待队列长度
+    accept-count: 1000
+    #请求头最大长度kb
+    max-http-header-size: 1048576
+    #启动APR(非阻塞IO)
+    protocol: org.apache.coyote.http11.Http11AprProtocol
+  port: 7018
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: yc-example-dynamic-tp
