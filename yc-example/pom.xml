@@ -55,6 +55,7 @@
         <module>yc-example-smart-socket</module>
         <module>yc-example-dynamic-tp</module>
         <module>yc-example-gobrs-async</module>
+        <module>yc-example-image-combiner</module>
     </modules>
 
 
