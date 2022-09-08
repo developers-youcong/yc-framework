@@ -12,7 +12,7 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-common-easypdf</artifactId>
     <properties>
-        <easypdf.version>2.9.8</easypdf.version>
+        <easypdf.version>2.10.1</easypdf.version>
     </properties>
     <dependencies>
         <dependency>

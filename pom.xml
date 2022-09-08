@@ -452,6 +452,24 @@
             </dependency>
 
             <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-gobrs-async</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-image-combiner</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-easypdf</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
