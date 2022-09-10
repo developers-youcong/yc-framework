@@ -12,7 +12,7 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-common-tlpoi</artifactId>
     <properties>
-        <tl.version>1.11.1</tl.version>
+        <tl.version>1.12.0</tl.version>
     </properties>
     <dependencies>
         <dependency>

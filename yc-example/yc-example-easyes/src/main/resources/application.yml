@@ -1,0 +1,26 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    #最小线程数
+    min-spare-threads: 500
+    #最大线程数
+    max-threads: 2500
+    #最大连接数
+    max-connections: 5000
+    #最大等待队列长度
+    accept-count: 1000
+    #请求头最大长度kb
+    max-http-header-size: 1048576
+    #启动APR(非阻塞IO)
+    protocol: org.apache.coyote.http11.Http11AprProtocol
+  port: 7020
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: yc-example-easyes
+easy-es:
+  enable: true #默认为true,若为false则认为不启用本框架
+  address : 127.0.0.1:9200 # es的连接地址,必须含端口 若为集群,则可以用逗号隔开 例如:127.0.0.1:9200,127.0.0.2:9200
