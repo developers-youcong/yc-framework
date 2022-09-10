@@ -27,7 +27,6 @@
         <module>yc-example-thread</module>
         <module>yc-example-multidatabase</module>
         <module>yc-example-wordtopdf</module>
-        <module>yc-example-quartz</module>
         <module>yc-example-xxljob</module>
         <module>yc-example-elasticjob</module>
         <module>yc-example-linktrack</module>
@@ -38,18 +37,10 @@
         <module>yc-example-mp</module>
         <module>yc-example-es</module>
         <module>yc-example-txlcn</module>
-        <module>yc-example-shardingjdbc</module>
         <module>yc-example-cxf</module>
         <module>yc-example-dubbo</module>
-        <module>yc-example-grpc</module>
         <module>yc-example-shedlock</module>
         <module>yc-example-test</module>
-        <module>yc-example-seata</module>
-        <module>yc-example-cs</module>
-        <module>yc-example-activemq</module>
-        <module>yc-example-kafka</module>
-        <module>yc-example-rabbitmq</module>
-        <module>yc-example-rocketmq</module>
         <module>yc-example-netty</module>
         <module>yc-example-liteflow</module>
         <module>yc-example-smart-socket</module>
@@ -57,6 +48,7 @@
         <module>yc-example-gobrs-async</module>
         <module>yc-example-image-combiner</module>
         <module>yc-example-easypdf</module>
+        <module>yc-example-easyes</module>
     </modules>
 
 
