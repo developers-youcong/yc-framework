@@ -29,9 +29,7 @@
         <module>yc-example-wordtopdf</module>
         <module>yc-example-xxljob</module>
         <module>yc-example-elasticjob</module>
-        <module>yc-example-linktrack</module>
         <module>yc-example-druid</module>
-        <module>yc-example-sentinel</module>
         <module>yc-example-eureka</module>
         <module>yc-example-nacos</module>
         <module>yc-example-mp</module>
@@ -49,6 +47,10 @@
         <module>yc-example-image-combiner</module>
         <module>yc-example-easypdf</module>
         <module>yc-example-easyes</module>
+        <module>yc-example-kafka</module>
+        <module>yc-example-flink</module>
+        <module>yc-example-influxdb</module>
+        <module>yc-example-container</module>
     </modules>
 
 

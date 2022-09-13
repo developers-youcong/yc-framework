@@ -144,6 +144,12 @@
             <version>${bcprov-jdk15on.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+
     </dependencies>
 
 </project>
