@@ -1,0 +1,6 @@
+spring:
+  influx:
+    url: http://127.0.0.1:8086
+    user: influxdb
+    password: 123456ab
+    database: yc-test
