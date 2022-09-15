@@ -482,6 +482,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-couchbase</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
@@ -554,6 +560,21 @@
         </dependencies>
     </dependencyManagement>
 
+    <repository>
+        <id>central</id>
+        <name>aliyun maven</name>
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        <layout>default</layout>
+        <!-- 是否开启发布版构件下载 -->
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <!-- 是否开启快照版构件下载 -->
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+
     <build>
         <plugins>
             <plugin>
@@ -563,6 +584,9 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
+                    <fork>true</fork>
+                    <meminitial>512m</meminitial>
+                    <maxmem>4096m</maxmem>
                 </configuration>
             </plugin>
         </plugins>

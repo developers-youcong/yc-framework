@@ -1,0 +1,9 @@
+server:
+  port: 7104
+  servlet:
+    context-path: /test
+  jetty:
+    threads:
+      acceptors: -1                   #Number of acceptor threads to use. When the value is -1, the default, the number of acceptors is derived from the operating environment.
+      selectors: -1                   #Number of selector threads to use. When the value is -1, the default, thenumber of selectors is derived from the operating environment.
+    max-http-form-post-size: 200000   #Maximum size of the form content in any HTTP post request.
