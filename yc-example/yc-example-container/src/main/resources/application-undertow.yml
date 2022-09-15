@@ -1,0 +1,15 @@
+server:
+  undertow:
+    undertow:
+      io-threads: 16
+      # 阻塞任务线程池, 当执行类似servlet请求阻塞IO操作, undertow会从这个线程池中取得线程
+      # 它的值设置取决于系统线程执行任务的阻塞系数，默认值是IO线程数*8
+      worker-threads: 256
+      # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理
+      # 每块buffer的空间大小,越小的空间被利用越充分，不要设置太大，以免影响其他应用，合适即可
+      buffer-size: 1024
+      # 每个区分配的buffer数量 , 所以pool的大小是buffer-size * buffers-per-region
+      buffers-per-region: 1024
+      # 是否分配的直接内存(NIO直接分配的堆外内存)
+      direct-buffers: true
+  port: 7105

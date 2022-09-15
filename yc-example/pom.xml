@@ -51,6 +51,8 @@
         <module>yc-example-flink</module>
         <module>yc-example-influxdb</module>
         <module>yc-example-container</module>
+        <module>yc-example-clickhouse</module>
+        <module>yc-example-rocketmq</module>
     </modules>
 
 

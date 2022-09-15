@@ -12,13 +12,25 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-common-rocketmq</artifactId>
     <properties>
-    <rocketmq.version>2.1.1</rocketmq.version>
+        <rocketmq-boot.version>2.2.0</rocketmq-boot.version>
+        <rocketmq.version>4.9.2</rocketmq.version>
     </properties>
-<dependencies>
-    <dependency>
-        <groupId>org.apache.rocketmq</groupId>
-        <artifactId>rocketmq-spring-boot-starter</artifactId>
-        <version>${rocketmq.version}</version>
-    </dependency>
-</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>${rocketmq-boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>${rocketmq.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-common</artifactId>
+            <version>${rocketmq.version}</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -62,7 +62,6 @@
         <module>yc-common-sqlserver</module>
         <module>yc-common-postgresql</module>
         <module>yc-common-neo4j</module>
-        <module>yc-common-couchbase</module>
         <module>yc-common-dmjdbc</module>
     </modules>
 
