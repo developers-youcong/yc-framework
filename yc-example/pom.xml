@@ -53,6 +53,7 @@
         <module>yc-example-container</module>
         <module>yc-example-clickhouse</module>
         <module>yc-example-rocketmq</module>
+        <module>yc-example-activemq</module>
     </modules>
 
 
