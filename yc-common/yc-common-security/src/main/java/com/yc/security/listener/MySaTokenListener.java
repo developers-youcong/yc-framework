@@ -18,43 +18,48 @@ import org.springframework.stereotype.Component;
 public class MySaTokenListener implements SaTokenListener {
 
     @Override
-    public void doLogin(String s, Object o, String s1, SaLoginModel saLoginModel) {
-        log.info("登录触发");
+    public void doLogin(String loginType, Object loginId, String tokenValue, SaLoginModel loginModel) {
+        System.out.println("---------- 每次登录时触发");
     }
 
     @Override
-    public void doLogout(String s, Object o, String s1) {
-        log.info("注销触发");
+    public void doLogout(String loginType, Object loginId, String tokenValue) {
+        System.out.println("---------- 每次注销时触发");
     }
 
     @Override
-    public void doKickout(String s, Object o, String s1) {
-        log.info("每次被踢下线时触发");
+    public void doKickout(String loginType, Object loginId, String tokenValue) {
+        System.out.println("---------- 每次被踢下线时触发");
     }
 
     @Override
-    public void doReplaced(String s, Object o, String s1) {
-        log.info("每次被顶下线时触发");
+    public void doReplaced(String loginType, Object loginId, String tokenValue) {
+        System.out.println("---------- 每次被顶下线时触发");
     }
 
     @Override
-    public void doDisable(String s, Object o, long l) {
-        log.info("每次被封禁时触发");
+    public void doDisable(String loginType, Object loginId, String service, int level, long disableTime) {
+        System.out.println("----------  每次被封禁时触发");
     }
 
     @Override
-    public void doUntieDisable(String s, Object o) {
-        log.info("每次被解封时触发");
+    public void doUntieDisable(String loginType, Object loginId, String service) {
+        System.out.println("---------- 每次被解封时触发");
     }
 
     @Override
-    public void doCreateSession(String s) {
-        log.info("每次创建Session时触发");
+    public void doCreateSession(String id) {
+        System.out.println("---------- 每次创建Session时触发");
     }
 
     @Override
-    public void doLogoutSession(String s) {
-        log.info("每次注销Session时触发");
+    public void doLogoutSession(String id) {
+        System.out.println("---------- 每次注销Session时触发");
+    }
+
+    @Override
+    public void doRenewTimeout(String tokenValue, Object loginId, long timeout) {
+        System.out.println("---------- 每次Token续期时触发");
     }
 }
 

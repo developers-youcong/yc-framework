@@ -102,7 +102,7 @@ public class AuthController {
     @Log("退出")
     @SaCheckLogin
     public RespBody logout(@RequestBody LogoutReqDTO reqDTO) {
-        StpUtil.logoutByLoginId(reqDTO.getUserId());
+        StpUtil.logout(reqDTO.getUserId());
         return RespBody.success();
     }
 
@@ -119,13 +119,13 @@ public class AuthController {
     }
 
     /**
-     * 获取用户对应的角色菜单
+     * 获取用户对应的角色菜单URL
      *
      * @param reqDTO
      * @return
      */
     @PostMapping("/auth/getPerm")
-    @ApiOperation("获取用户对应的角色菜单")
+    @ApiOperation("获取用户对应的角色菜单URL")
     public RespBody<List<String>> getPerm(@RequestBody UserIdReqDTO reqDTO) {
         return RespBody.success(userAuthService.queryUserIdByPerm(reqDTO));
     }
