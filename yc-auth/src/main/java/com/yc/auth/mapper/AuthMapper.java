@@ -32,7 +32,7 @@ public interface AuthMapper {
 
 
     /**
-     * 根据用户ID获取对应的角色所属菜单key
+     * 根据用户ID获取对应的角色所属菜单URL
      *
      * @param userId
      * @return

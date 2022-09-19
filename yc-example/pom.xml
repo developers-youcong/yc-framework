@@ -54,6 +54,7 @@
         <module>yc-example-clickhouse</module>
         <module>yc-example-rocketmq</module>
         <module>yc-example-activemq</module>
+        <module>yc-example-quartz</module>
     </modules>
 
 

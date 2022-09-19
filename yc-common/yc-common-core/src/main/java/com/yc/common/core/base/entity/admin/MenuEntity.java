@@ -23,6 +23,9 @@ public class MenuEntity {
     @TableField("menu_key")
     private String menuKey;
 
+    @TableField("menu_url")
+    private String menuUrl;
+
     @TableField("menu_type")
     private String menuType;
 

@@ -52,10 +52,10 @@
             B.user_id = #{userId}
     </select>
 
-    <!-- 根据用户ID获取对应的角色所属菜单key -->
+    <!-- 根据用户ID获取对应的角色所属菜单url -->
     <select id="selectUserIdByPerm" resultType="java.lang.String">
         SELECT
-            E.menu_key
+            E.menu_url
         FROM
             yc_user AS A
             LEFT JOIN yc_user_role AS B ON ( A.id = B.user_id )

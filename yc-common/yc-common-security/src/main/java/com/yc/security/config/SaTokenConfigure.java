@@ -1,8 +1,10 @@
 package com.yc.security.config;
 
 import cn.dev33.satoken.interceptor.SaRouteInterceptor;
+import cn.dev33.satoken.jwt.StpLogicJwtForSimple;
 import cn.dev33.satoken.router.SaRouter;
 import cn.dev33.satoken.stp.StpInterface;
+import cn.dev33.satoken.stp.StpLogic;
 import cn.dev33.satoken.stp.StpUtil;
 import com.yc.api.UserApi;
 import com.yc.common.core.base.constant.ApplicationConst;
@@ -11,6 +13,7 @@ import com.yc.common.core.base.enums.RespCode;
 import com.yc.common.core.base.result.RespBody;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -28,7 +31,6 @@ public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
 
     @Autowired
     private UserApi userApi;
-
 
     /**
      * 注册拦截器
@@ -48,7 +50,7 @@ public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
             SaRouter.match("/role/**", () -> StpUtil.checkPermission("admin"));
 
         })).addPathPatterns("/**").excludePathPatterns(
-                "/auth/**", "/operate_log/add","/doc.html", "/webjars/**", "/swagger-resources", "/actuator/**");
+                "/auth/**", "/operate_log/add", "/doc.html", "/webjars/**", "/swagger-resources", "/actuator/**");
     }
 
     @Override

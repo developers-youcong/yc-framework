@@ -44,7 +44,7 @@
         <spring-webmvc.version>5.2.2.RELEASE</spring-webmvc.version>
         <jsoup.version>1.11.3</jsoup.version>
         <webmagic.version>0.7.4</webmagic.version>
-        <sa-token.version>1.30.0</sa-token.version>
+        <sa-token.version>1.31.0</sa-token.version>
         <jackson-annotations.version>2.11.3</jackson-annotations.version>
         <jbcrypt.version>0.4</jbcrypt.version>
         <guava.version>21.0</guava.version>
@@ -530,13 +530,18 @@
                 <artifactId>sa-token-spring-boot-starter</artifactId>
                 <version>${sa-token.version}</version>
             </dependency>
-            <!-- Sa-Token 整合 Redis （使用jackson序列化方式） -->
+
             <dependency>
                 <groupId>cn.dev33</groupId>
                 <artifactId>sa-token-dao-redis-jackson</artifactId>
                 <version>${sa-token.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-jwt</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
