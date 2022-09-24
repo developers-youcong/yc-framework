@@ -55,6 +55,7 @@
         <module>yc-example-rocketmq</module>
         <module>yc-example-activemq</module>
         <module>yc-example-quartz</module>
+        <module>yc-example-postgresql</module>
     </modules>
 
 
