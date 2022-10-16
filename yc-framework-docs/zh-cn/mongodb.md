@@ -58,3 +58,7 @@ private MongoService mongoService;
 
 源代码示例:
 https://github.com/developers-youcong/yc-framework/tree/main/yc-example/yc-example-mongo
+
+
+## 四、YC-Framework如何使用MongoDB
+[从零开始学YC-Framework之MongoDB](https://youcongtech.com/2022/06/19/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6YC-Framework%E4%B9%8BMongoDB/)

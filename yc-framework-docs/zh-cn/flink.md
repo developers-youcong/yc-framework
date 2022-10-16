@@ -17,3 +17,6 @@ https://github.com/apache/flink
 </dependency>
 
 ```
+
+# YC-Framework如何使用Flink
+[从零开始学YC-Framework之Flink](https://youcongtech.com/2022/10/06/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6YC-Framework%E4%B9%8BFlink/)
