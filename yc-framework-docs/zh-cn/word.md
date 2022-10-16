@@ -24,3 +24,6 @@ XWPFTemplate template = XWPFTemplate.compile(templatePath)
 
 
 ```
+
+## 四、博客文章
+[开源项目之word模板引擎](https://mp.weixin.qq.com/s?__biz=MzUxODk0ODQ3Ng==&mid=2247487099&idx=1&sn=3d5882f20d864bfc822a2117627d7483&chksm=f9805d68cef7d47e80a8a85f6d8de123b55ddb472c751a1fb13abcea93ba486251f8564a1077&token=730841189&lang=zh_CN#rd)

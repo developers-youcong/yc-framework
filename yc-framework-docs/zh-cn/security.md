@@ -90,3 +90,6 @@ public class OverallExceptionHandler {
 
 源代码示例:
 https://github.com/developers-youcong/yc-framework/tree/main/yc-example/yc-example-security
+
+## 三、YC-Framework如何使用鉴权
+[从零开始学YC-Framework之鉴权](https://youcongtech.com/2022/05/14/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E5%AD%A6YC-Framework%E4%B9%8B%E9%89%B4%E6%9D%83/)

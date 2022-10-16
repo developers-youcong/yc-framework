@@ -20,3 +20,6 @@ https://github.com/alibaba/nacos/issues
 
 **Nacos版本下载(最新版本和历史版本均可在这找到):**
 https://github.com/alibaba/nacos/releases
+
+博客文章:
+[SpringCloud Alibaba之Nacos](https://youcongtech.com/2020/08/23/SpringCloud-Alibaba%E4%B9%8BNacos/)
