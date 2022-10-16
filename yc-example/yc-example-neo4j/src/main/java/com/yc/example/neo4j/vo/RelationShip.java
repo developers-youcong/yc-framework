@@ -14,7 +14,6 @@ import org.springframework.data.annotation.Id;
 /**
  * @description:
  * @author: youcong
- * @time: 2022/9/23 11:34
  */
 @RelationshipEntity(type = "relationShip")
 @Data

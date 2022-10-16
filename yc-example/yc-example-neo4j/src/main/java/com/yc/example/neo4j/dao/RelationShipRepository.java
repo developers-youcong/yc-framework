@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 /**
  * @description:
  * @author: youcong
- * @time: 2022/9/23 11:36
  */
 @Repository
 public interface RelationShipRepository extends Neo4jRepository<RelationShip, Long> {

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 /**
  * @description:
  * @author: youcong
- * @time: 2022/9/23 11:35
  */
 @Repository
 public interface DeptRepository extends Neo4jRepository<Dept, Long> {
