@@ -93,3 +93,7 @@ public interface PostRepository extends ElasticsearchRepository<PostEntity, Stri
 
 源代码示例:
 https://github.com/developers-youcong/yc-framework/tree/main/yc-example/yc-example-es
+
+
+## 四、YC-Framework如何使用ES
+[深入浅出分布式搜索引擎之Elastic Search](https://youcongtech.com/2022/04/16/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%B9%8BElastic-Search/)

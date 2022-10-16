@@ -131,3 +131,6 @@ public class CSDNDataCrawler implements PageProcessor {
 
 源代码示例:
 https://github.com/developers-youcong/yc-framework/tree/main/yc-example/yc-example-crawler
+
+## 三、YC-Framework如何使用数据爬虫
+[从零开始学YC-Framework之数据爬虫](https://youcongtech.com/2022/06/19/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6YC-Framework%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB/)

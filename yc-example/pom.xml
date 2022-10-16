@@ -56,6 +56,7 @@
         <module>yc-example-activemq</module>
         <module>yc-example-quartz</module>
         <module>yc-example-postgresql</module>
+        <module>yc-example-neo4j</module>
     </modules>
 
 

@@ -14,7 +14,7 @@
 
 
     <properties>
-        <liteflow.version>2.6.12</liteflow.version>
+        <liteflow.version>2.9.0</liteflow.version>
     </properties>
     <dependencies>
         <dependency>

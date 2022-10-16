@@ -56,3 +56,6 @@ spring:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
 ```
+
+## 三、YC-Framework如何使用Kafka
+[从零开始学YC-Framework之Kafka](https://youcongtech.com/2022/10/06/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6YC-Framework%E4%B9%8BKafka/)

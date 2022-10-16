@@ -40,3 +40,6 @@ rocketmq:
         retryTimesWhenSendFailed: 2
 
 ```
+
+## 三、YC-Framework如何使用RocketMQ
+[从零开始学YC-Framework之RocketMQ](https://youcongtech.com/2022/10/06/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6YC-Framework%E4%B9%8BRocketMQ/)

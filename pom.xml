@@ -286,6 +286,12 @@
 
             <dependency>
                 <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-neo4j</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
                 <artifactId>yc-common-xxljob</artifactId>
                 <version>${version}</version>
             </dependency>
