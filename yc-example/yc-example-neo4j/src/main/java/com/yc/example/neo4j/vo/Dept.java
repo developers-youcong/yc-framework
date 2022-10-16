@@ -12,7 +12,6 @@ import org.springframework.data.annotation.Id;
 /**
  * @description:
  * @author: youcong
- * @time: 2022/9/23 11:31
  */
 @NodeEntity(label = "dept")
 @AllArgsConstructor
