@@ -8,7 +8,6 @@ import java.util.concurrent.*;
 
 /**
  * @author youcong
- * @date 2021/11/04 21:01
  * @description 线程池
  */
 public class ThreadPoolUtil {
