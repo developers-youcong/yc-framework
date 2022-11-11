@@ -1,6 +1,7 @@
 package com.yc.example.liteflow.dto;
 
-import com.yomahub.liteflow.entity.data.AbsSlot;
+
+import com.yomahub.liteflow.slot.Slot;
 import lombok.Builder;
 import lombok.Data;
 
@@ -10,7 +11,7 @@ import lombok.Data;
  */
 @Data
 @Builder
-public class ProcessReqDTO extends AbsSlot {
+public class ProcessReqDTO extends Slot {
     private Long processId;
     private String processName;
     private Integer processStatus;

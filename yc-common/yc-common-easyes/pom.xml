@@ -12,7 +12,7 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-common-easyes</artifactId>
     <properties>
-        <easy-es.version>1.0.1</easy-es.version>
+        <easy-es.version>1.0.3</easy-es.version>
     </properties>
     <dependencies>
         <dependency>

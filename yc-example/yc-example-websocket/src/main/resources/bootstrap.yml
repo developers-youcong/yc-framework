@@ -1,0 +1,23 @@
+server:
+  port: 9800
+
+# Spring
+spring:
+  freemarker:
+    settings:
+      classic_compatible: true #处理空值
+      datetime_format: yyy-MM-dd HH:mm
+      number_format: 0.##
+    suffix: .ftl
+    template-loader-path:
+      - classpath:/templates
+  servlet:
+    multipart:
+      max-request-size: 5GB  # 上传文件总的最大值
+      max-file-size: 1GB #单个文件最大值
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    # 应用名称
+    name: platform-websocket

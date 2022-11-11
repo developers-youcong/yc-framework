@@ -44,12 +44,12 @@
         <spring-webmvc.version>5.2.2.RELEASE</spring-webmvc.version>
         <jsoup.version>1.11.3</jsoup.version>
         <webmagic.version>0.7.4</webmagic.version>
-        <sa-token.version>1.31.0</sa-token.version>
+        <sa-token.version>1.32.0</sa-token.version>
         <jackson-annotations.version>2.11.3</jackson-annotations.version>
         <jbcrypt.version>0.4</jbcrypt.version>
         <guava.version>21.0</guava.version>
         <commons-net.version>3.6</commons-net.version>
-        <t-log.version>1.4.1</t-log.version>
+        <t-log.version>1.5.0</t-log.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -500,6 +500,24 @@
             </dependency>
 
             <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-sqlserver</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-clickhouse</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yc.framework</groupId>
+                <artifactId>yc-common-websocket</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
@@ -577,20 +595,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <repository>
-        <id>central</id>
-        <name>aliyun maven</name>
-        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-        <layout>default</layout>
-        <!-- 是否开启发布版构件下载 -->
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <!-- 是否开启快照版构件下载 -->
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </repository>
 
     <build>
         <plugins>

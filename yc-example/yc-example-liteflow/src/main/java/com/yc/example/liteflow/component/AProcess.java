@@ -16,9 +16,5 @@ public class AProcess extends NodeComponent {
     public void process() {
         System.out.println("第一道流程");
         ProcessReqDTO req = this.getSlot().getRequestData();
-        ProcessSlot processSlot = this.getSlot();
-        processSlot.setProcessId(req.getProcessId());
-        processSlot.setProcessName(req.getProcessName());
-        processSlot.setProcessStatus(req.getProcessStatus());
     }
 }

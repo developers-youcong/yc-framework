@@ -3,7 +3,7 @@ package com.yc.example.liteflow.controller;
 import com.yc.example.liteflow.dto.ProcessReqDTO;
 import com.yc.example.liteflow.slot.ProcessSlot;
 import com.yomahub.liteflow.core.FlowExecutor;
-import com.yomahub.liteflow.entity.data.LiteflowResponse;
+import com.yomahub.liteflow.flow.LiteflowResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +21,7 @@ public class ProccessController {
     @GetMapping("/test")
     public String test() {
         ProcessReqDTO processReqDTO = getProcessReqDTO();
-        LiteflowResponse<ProcessSlot> response = flowExecutor.execute2Resp("chain1", processReqDTO, ProcessSlot.class);
+        LiteflowResponse response = flowExecutor.execute2Resp("chain1", processReqDTO, ProcessSlot.class);
         System.out.println("isSuccess:" + response.isSuccess());
         System.out.println("slot:" + response.getSlot());
         return response.getMessage();

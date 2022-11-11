@@ -12,7 +12,7 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-common-shedlock</artifactId>
     <properties>
-        <shedlock.version>4.28.0</shedlock.version>
+        <shedlock.version>4.42.0</shedlock.version>
     </properties>
     <dependencies>
         <dependency>

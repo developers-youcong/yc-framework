@@ -13,7 +13,7 @@
     <artifactId>yc-common-smart-socket</artifactId>
 
     <properties>
-        <smart.version>1.5.15</smart.version>
+        <smart.version>1.6.0</smart.version>
     </properties>
     <dependencies>
         <dependency>

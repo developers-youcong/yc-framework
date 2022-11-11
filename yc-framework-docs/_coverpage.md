@@ -1,7 +1,7 @@
 
 ![logo](_media/logo.png)
 
-# YC-Framework <small>1.0.9</small>
+# YC-Framework <small>1.0.10</small>
 
 > 致力于打造一款优秀的分布式微服务解决方案
 
