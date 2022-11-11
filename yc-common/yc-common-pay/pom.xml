@@ -13,7 +13,7 @@
     <artifactId>yc-common-pay</artifactId>
 
     <properties>
-        <ijapy.version>2.7.9</ijapy.version>
+        <ijapy.version>2.9.4</ijapy.version>
     </properties>
     <dependencies>
         <dependency>

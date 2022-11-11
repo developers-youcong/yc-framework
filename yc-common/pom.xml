@@ -63,6 +63,7 @@
         <module>yc-common-postgresql</module>
         <module>yc-common-neo4j</module>
         <module>yc-common-dmjdbc</module>
+        <module>yc-common-websocket</module>
     </modules>
 
 

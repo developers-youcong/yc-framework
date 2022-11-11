@@ -50,7 +50,7 @@
 - 服务注册与配置中心:Nacos、Eureka、Dubbo；
 - 支付:IJPay；
 - 微信生态支持:WxJava；
-- 多种通信支持:gRPC、HTTP等；
+- 多种通信支持:gRPC、HTTP、WebSocket等；
 - 分布式处理引擎:Apache Flink；
 - 文件存储:私有云或公有云均支持；
 - 单元测试框架:Junit；
@@ -193,23 +193,29 @@
 - 例子覆盖60%(yc-example)。
 
 
-## 本次版本V1.0.9更新
-- 1.接入空气质量数据(和风天气API)。
-- 2.新增image-combiner(Java服务端图片合成工具)。
-- 3.新增easyes(在elatic search基础上只做增强不做改变)。
-- 4.新增dynamic-tp(动态线程池监控)。
-- 5.新增Gobrs-Async(高性能异步编排)。
-- 6.新增easypdf(一个用搭积木的方式构建pdf)。
-- 7.修复若干bug。
-- 8.支持InfluxDB。
-- 9.支持Clickhouse。
-- 10.支持Ti-DB。
-- 11.支持SQL Server。
-- 12.支持postgreSQL。
-- 13.支持neo4j。
-- 14.支持couchbase。
-- 15.支持达梦数据库。
-- 16.yc-framework官方文档全部开源。
+## 本次版本V1.0.10更新
+- 1.精简与完善Example
+- 2.鉴权体系精确到接口级别
+- 3.文档全面更新
+- 4.增加JWT插件
+- 5.修复若干bug
+- 6.增加国密算法(SM2 SM3 SM4)
+- 7.升级:
+    - (1)LiteFlow升级2.9.3
+    - (2)Sa-Token升级1.32.0
+    - (3)Wx-Java升级4.4.0
+    - (4)Smart-Socket升级1.6.0
+    - (5)ShedLock升级4.42.0
+    - (6)T-Log升级1.5.0
+    - (7)IJPay升级2.9.4
+    - (8)Image Combiner升级2.3.7
+    - (9)Gobrs Async升级1.2.3-RELEASE
+    - (10)ElasticJob升级3.0.2
+    - (11)Easy-Poi升级4.4.0
+    - (12)Dynamic-Tp升级1.0.9
+    - (13)Easy-ES升级1.0.3
+    - (14)Dubbo升级3.1.2
+    - (15)WebMagic升级0.7.6
 
 ## 八、环境
 

@@ -1,7 +1,7 @@
 package com.yc.example.liteflow.slot;
 
 
-import com.yomahub.liteflow.entity.data.AbsSlot;
+import com.yomahub.liteflow.slot.Slot;
 import lombok.Data;
 
 /**
@@ -9,7 +9,7 @@ import lombok.Data;
  * @author: youcong
  */
 @Data
-public class ProcessSlot extends AbsSlot {
+public class ProcessSlot extends Slot {
     private Long processId;
     private String processName;
     private Integer processStatus;

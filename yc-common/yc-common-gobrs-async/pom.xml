@@ -13,7 +13,7 @@
     <artifactId>yc-common-gobrs-async</artifactId>
 
     <properties>
-        <gobrs-async.version>1.2.1-RELEASE</gobrs-async.version>
+        <gobrs-async.version>1.2.3-RELEASE</gobrs-async.version>
     </properties>
     <dependencies>
         <dependency>

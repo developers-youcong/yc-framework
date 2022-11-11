@@ -12,7 +12,7 @@
     <groupId>com.yc.framework</groupId>
     <artifactId>yc-common-dynamic-tp</artifactId>
     <properties>
-        <dynamic-tp.version>1.0.8</dynamic-tp.version>
+        <dynamic-tp.version>1.0.9</dynamic-tp.version>
     </properties>
     <dependencies>
         <dependency>

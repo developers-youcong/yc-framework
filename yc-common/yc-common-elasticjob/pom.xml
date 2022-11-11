@@ -13,7 +13,7 @@
     <artifactId>yc-common-elasticjob</artifactId>
 
     <properties>
-        <elasticjob.version>3.0.1</elasticjob.version>
+        <elasticjob.version>3.0.2</elasticjob.version>
     </properties>
     <dependencies>
         <dependency>

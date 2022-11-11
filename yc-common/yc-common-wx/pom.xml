@@ -13,7 +13,7 @@
     <artifactId>yc-common-wx</artifactId>
 
     <properties>
-        <wx.version>4.1.0</wx.version>
+        <wx.version>4.4.0</wx.version>
     </properties>
     <dependencies>
         <!-- 微信支付 -->
