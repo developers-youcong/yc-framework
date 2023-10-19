@@ -280,7 +280,7 @@
 
 ## 十、官方文档
 文档地址:
-http://framework.youcongtech.com/
+[http://framework.youcongtech.com/](https://youcongtech.com/yc-framework-docs)
 
 开源作者博客:
 https://youcongtech.com/
